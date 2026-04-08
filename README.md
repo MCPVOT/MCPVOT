@@ -89,8 +89,11 @@ Personal AI agent with cross-platform MCP (Model Context Protocol) integration b
 | **Web3 / Identity** | ENS (.eth) · Basename (mcpvot.base.eth) · Farcaster · Warpcast · IPFS · Agent Registration (.well-known) |
 | **Database** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white) ![Neon](https://img.shields.io/badge/Neon_Serverless-00E5FF?style=flat-square) ![Upstash](https://img.shields.io/badge/Upstash_Redis-DC382D?style=flat-square) |
 | **Infra** | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white) |
-| **Automation** | MCP Servers · A2A (Agent-to-Agent) · DGM (Darwin Gödel Machine) · n8n Workflows · GitHub Actions CI/CD |
-| **Protocols** | MCP (Model Context Protocol) · A2A · x402 (HTTP 402 Payment) · ERC-4804 |
+| **Automation** | n8n Workflows · DeerFlow · VoltAgent · Cron Jobs · Message Queues · Autonomous Pipelines |
+| **Bots / Comms** | Telegram Bot · WhatsApp (Meta + Twilio) · Webhook Handlers · AI Chat Streaming |
+| **AI Infra** | MCP Servers · A2A (Agent-to-Agent) · DGM (Darwin Gödel Machine) · Memory MCP · Gemini CLI Server |
+| **Monitoring** | GitHub Actions CI/CD · Vercel Cron · Health Checks · Sentry Error Tracking · Rate Limiting (Upstash) |
+| **Protocols** | MCP (Model Context Protocol) · A2A · x402 (HTTP 402 Payment) · ERC-4804 · SSE Streaming |
 
 ---
 
