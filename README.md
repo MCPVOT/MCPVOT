@@ -31,10 +31,10 @@ Building AI-powered tools for Colombian real estate, decentralized autonomous ec
 <tr>
 <td width="50%" valign="top">
 
-### [Pequi](https://github.com/MCPVOT/pequi)
+### [Pequi](https://pequi-lyart.vercel.app)
 AI-powered real estate platform for Ibagué, Colombia. Ley 820 compliant contracts, property search, and AI chat assistant.
 
-[Live](https://pequi-lyart.vercel.app) · `Next.js 15` `React 19` `TypeScript` `Prisma` `PostgreSQL` `Clerk` `Vercel`
+[Code](https://github.com/MCPVOT/pequi) · `Next.js 15` `React 19` `TypeScript` `Prisma` `PostgreSQL` `Clerk` `Vercel`
 
 </td>
 <td width="50%" valign="top">
