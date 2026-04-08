@@ -13,6 +13,7 @@
   <img src="https://img.shields.io/badge/Location-Colombia-f5b800?style=flat-square&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/Chain-Base-0052FF?style=flat-square&logo=base&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/x402-Facilitator_V2-FF6B35?style=flat-square&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/ENS-mcpvot.eth-5298FF?style=flat-square&labelColor=0d1117" />
   <img src="https://komarev.com/ghpvc/?username=MCPVOT&style=flat-square&color=00ff88&label=Profile+views" alt="Profile views" />
 </p>
 
@@ -83,8 +84,9 @@ Personal AI agent with cross-platform MCP (Model Context Protocol) integration b
 | **Frontend** | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) |
 | **AI / LLM** | ![Claude](https://img.shields.io/badge/Claude-OPUS-7C3AED?style=flat-square) ![DeepSeek](https://img.shields.io/badge/DeepSeek-R1-4A90D9?style=flat-square) ![Qwen](https://img.shields.io/badge/Qwen-3.6_Plus-FF6B35?style=flat-square) ![Ollama](https://img.shields.io/badge/Ollama-Local-000000?style=flat-square) |
 | **AI Platforms** | [OpenRouter](https://openrouter.ai) · [Z.AI](https://z.ai) · [OpenCode](https://github.com/opencode-ai/opencode) · [Claude Code](https://claude.ai/code) |
-| **Blockchain** | ![Base](https://img.shields.io/badge/Base-0052FF?style=flat-square&logo=base&logoColor=white) ![Solana](https://img.shields.io/badge/Solana-9945FF?style=flat-square&logo=solana&logoColor=white) ![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=flat-square&logo=ethereum&logoColor=white) |
-| **Web3** | x402 Protocol · Chainlink VRF · ERC-1155 · Uniswap V4 · ENS · Farcaster · IPFS |
+| **Blockchain** | ![Ethereum](https://img.shields.io/badge/Ethereum-L1-3C3C3D?style=flat-square&logo=ethereum&logoColor=white) ![Base](https://img.shields.io/badge/Base-L2-0052FF?style=flat-square&logo=base&logoColor=white) ![Solana](https://img.shields.io/badge/Solana-SVM-9945FF?style=flat-square&logo=solana&logoColor=white) |
+| **Smart Contracts** | ![Solidity](https://img.shields.io/badge/Solidity-EVM-363636?style=flat-square&logo=solidity&logoColor=white) ERC-20 · ERC-721 · ERC-1155 · ERC-4804 · Uniswap V4 · Chainlink VRF · x402 Protocol |
+| **Web3 / Identity** | ENS (.eth) · Basename (mcpvot.base.eth) · Farcaster · Warpcast · IPFS · Agent Registration (.well-known) |
 | **Database** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white) ![Neon](https://img.shields.io/badge/Neon_Serverless-00E5FF?style=flat-square) ![Upstash](https://img.shields.io/badge/Upstash_Redis-DC382D?style=flat-square) |
 | **Infra** | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white) |
 | **Automation** | MCP Servers · A2A (Agent-to-Agent) · DGM (Darwin Gödel Machine) · n8n Workflows · GitHub Actions CI/CD |
