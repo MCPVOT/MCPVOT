@@ -13,7 +13,9 @@
   <img src="https://img.shields.io/badge/Location-Colombia-f5b800?style=flat-square&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/Chain-Base-0052FF?style=flat-square&logo=base&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/x402-Facilitator_V2-FF6B35?style=flat-square&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/c402-HTTP_402_Payment-00ff88?style=flat-square&labelColor=0d1117" />
   <img src="https://img.shields.io/badge/ENS-mcpvot.eth-5298FF?style=flat-square&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/API-Public-00e5ff?style=flat-square&labelColor=0d1117" />
   <img src="https://komarev.com/ghpvc/?username=MCPVOT&style=flat-square&color=00ff88&label=Profile+views" alt="Profile views" />
 </p>
 
@@ -21,7 +23,12 @@
 
 ## About
 
-Building AI-powered tools for Colombian real estate, decentralized autonomous ecosystems, and on-chain agent economics. We leverage cutting-edge AI models, agent protocols, x402 payment facilitation, and blockchain to create practical solutions.
+Building AI-powered tools for Colombian real estate, decentralized autonomous ecosystems, and on-chain agent economics. We created the **c402 Protocol** — a Colombian-first HTTP 402 Payment Required pattern — and the **x402 Facilitator V2** for autonomous agent-to-agent payments on Base.
+
+- **Pequi API** — Colombia's first public real estate data API (276 barrios, 18 endpoints) with c402 monetization
+- **x402 Protocol** — HTTP 402 Payment Required for AI agents, deployed on Base mainnet, Coinbase ecosystem listed
+- **Hermes Agent** + **the orchestration engine** — Self-improving AI agents with recursive LM execution, running on [cloud host]
+- **Multi-model consensus** — LLMs as independent policies aggregated by reward model for legal compliance
 
 ---
 
@@ -64,15 +71,37 @@ Personal AI agent with cross-platform MCP (Model Context Protocol) integration b
 
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+
+### [xpequi-api](https://github.com/MCPVOT/xpequi-api)
+Colombia's first public real estate data API. 18 endpoints, 276 barrios, c402 Protocol, AVM valuation, live UVR/IPC.
+
+[Code](https://github.com/MCPVOT/xpequi-api) · `18 Endpoints` `c402 Protocol` `Open Finance` `TypeScript SDK` `Python SDK` `MCP Server`
+
+</td>
+<td width="50%" valign="top">
+
+### [Hermes Agent](https://github.com/NousResearch/hermes-agent)
+Self-improving AI agent framework with skill learning loop, messaging gateway, 7 terminal backends. Runs on [cloud host] with DeepSeek V4.
+
+`Self-improving` `Skill Loop` `[cloud host]` `DeepSeek V4` `the orchestration engine`
+
+</td>
+</tr>
 </table>
 
 ---
 
-## x402 Facilitator
+## x402 Facilitator &amp; c402 Protocol
 
 <p align="center">
   <a href="https://mcpvot.xyz"><img width="90%" src="https://capsule-render.vercel.app/api?type=rect&color=0:1a1a1a,100:2d2d2d&customTextList=USDC%20%E2%86%92%2069%2C420%20VOT%20%2B%20VRF%20Rarity%20NFT%0AChainlink%20VRF%20%C2%B7%20ERC-1155%20On-Chain%20SVG%20%C2%B7%2010%20Rarity%20Tiers%0ABase%20Mainnet%20%C2%B7%20Farcaster%20Mini-App%20%C2%B7%20mcpvot.eth&textColor=00ff88&textBg=1a1a1a&fontSize=20&fontAlign=42,50,58&fontAlignY=36,52,68&descSize=14&descAlign=center&stroke=FF6B35&strokeWidth=2" /></a>
 </p>
+
+**x402 V2** — Autonomous agent-to-agent payment facilitator on Base mainnet. ERC-1155 with Chainlink VRF for provably fair draws. Listed in the Coinbase ecosystem.
+
+**c402 Protocol** — Colombian-first HTTP 402 Payment Required pattern for API monetization. When a FREE tier exceeds its limit, the API returns `HTTP 402` with a Wompi checkout URL (PSE, Nequi, Daviplata, card). After payment, credits auto-activate. **Zero crypto** — atomic Redis deduction with SHA-256 webhook verification and 24h idempotency guard. See [xpequi-api](https://github.com/MCPVOT/xpequi-api) for implementation.
 
 ---
 
@@ -84,9 +113,10 @@ Personal AI agent with cross-platform MCP (Model Context Protocol) integration b
 | **Frontend** | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) |
 | **AI / LLM** | ![Claude](https://img.shields.io/badge/Claude-OPUS-7C3AED?style=flat-square) ![DeepSeek](https://img.shields.io/badge/DeepSeek-R1-4A90D9?style=flat-square) ![Qwen](https://img.shields.io/badge/Qwen-3.6_Plus-FF6B35?style=flat-square) ![Ollama](https://img.shields.io/badge/Ollama-Local-000000?style=flat-square) |
 | **AI Platforms** | [OpenRouter](https://openrouter.ai) · [Z.AI](https://z.ai) · [Hermes Agent](https://github.com/NousResearch/hermes-agent) · [the orchestration engine](https://github.com/NousResearch/hermes-agent) · [OpenCode](https://github.com/opencode-ai/opencode) · [Claude Code](https://claude.ai/code) |
-| **Agent Frameworks** | [Hermes Agent](https://github.com/NousResearch/hermes-agent) (NousResearch) — self-improving AI agent with skill learning loop, messaging gateway, 7 terminal backends · [the orchestration engine](https://github.com/NousResearch/hermes-agent) (Q00) — recursive LM forge with evidence gating evidence gating · agent orchestration · MCP Protocol · A2A Protocol |
+| **Agent Frameworks** | [Hermes Agent](https://github.com/NousResearch/hermes-agent) (NousResearch) — self-improving AI agent with skill learning loop, messaging gateway, 7 terminal backends · [the orchestration engine](https://github.com/NousResearch/hermes-agent) (Q00) — recursive LM forge with evidence gating evidence gating · agent orchestration · MCP Protocol · A2A Protocol · OpenClaw |
 | **Blockchain** | ![Ethereum](https://img.shields.io/badge/Ethereum-L1-3C3C3D?style=flat-square&logo=ethereum&logoColor=white) ![Base](https://img.shields.io/badge/Base-L2-0052FF?style=flat-square&logo=base&logoColor=white) ![Solana](https://img.shields.io/badge/Solana-SVM-9945FF?style=flat-square&logo=solana&logoColor=white) |
 | **Smart Contracts** | ![Solidity](https://img.shields.io/badge/Solidity-EVM-363636?style=flat-square&logo=solidity&logoColor=white) ERC-20 · ERC-721 · ERC-1155 · ERC-4804 · Uniswap V4 · Chainlink VRF · x402 Protocol |
+| **Payments / Monetization** | x402 V2 Facilitator (Base mainnet) · **c402 Protocol** (HTTP 402 — Wompi + Redis · zero crypto) · Wompi Web Checkout · PSE · Nequi · Daviplata · COP pricing · Prepaid Credits · Subscriptions |
 | **Web3 / Identity** | ENS (.eth) · Basename (mcpvot.base.eth) · Farcaster · Warpcast · IPFS · Agent Registration (.well-known) |
 | **Database** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white) ![Neon](https://img.shields.io/badge/Neon_Serverless-00E5FF?style=flat-square) ![Upstash](https://img.shields.io/badge/Upstash_Redis-DC382D?style=flat-square) |
 | **Infra** | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white) |
