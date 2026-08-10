@@ -37,56 +37,52 @@ Building AI-powered tools for Colombian real estate, decentralized autonomous ec
 <table>
 <tr>
 <td width="50%" valign="top">
-
 ### [Pequi](https://xpequi.xyz)
 AI-powered real estate platform for Ibagué, Colombia. Ley 820 compliant contracts, property search, and AI chat assistant.
 
 [Code](https://github.com/MCPVOT/pequi) · `Next.js 15` `React 19` `TypeScript` `Prisma` `PostgreSQL` `Clerk` `Vercel`
-
 </td>
 <td width="50%" valign="top">
-
 ### [MCPVotsAGI](https://github.com/MCPVOT/mcpvotsagi)
 Python SDK for agent orchestration, persistent memory, AI reasoning, and self-evolution.
 
 `pip install mcpvotsagi` · `Python 3.11+` `AsyncIO` `Redis` `WebSockets` `Ollama`
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-
 ### [MCPVOTS](https://github.com/MCPVOT/MCPVOTS)
 AI Agent Micro-Payment Ecosystem — VOTS token on Base, autonomous trading agents, x402 facilitation.
 
 [Live](https://mcpvot.xyz) · `Base` `VOT Token` `Chainlink VRF` `ERC-1155 NFTs` `Farcaster`
-
 </td>
 <td width="50%" valign="top">
-
 ### [Claude Agent MCP](https://github.com/MCPVOT/claude-agent-mcp)
 Personal AI agent with cross-platform MCP (Model Context Protocol) integration built on Claude.
 
 `Python` `MCP Protocol` `Claude API`
-
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
+### [MCP Agentic Wallet](https://github.com/MCPVOT/mcp-agentic-wallet)
+Open-source EIP-2612 Permit-based wallet sessions for AI agents — the reference implementation for paid MCP servers. Verify signatures, manage sessions, settle on-chain. No API keys, no recurring charges.
 
+`EIP-2612` `EVM` `MCP` `Permit` `Base` · [Code](https://github.com/MCPVOT/mcp-agentic-wallet)
+</td>
+<td width="50%" valign="top">
 ### [xpequi-api](https://github.com/MCPVOT/xpequi-api)
 Colombia's first public real estate data API. 18 endpoints, 276 barrios, c402 Protocol, AVM valuation, live UVR/IPC.
 
 [Code](https://github.com/MCPVOT/xpequi-api) · `18 Endpoints` `c402 Protocol` `Open Finance` `TypeScript SDK` `Python SDK` `MCP Server`
-
 </td>
-<td width="50%" valign="top">
-
+</tr>
+<tr>
+<td width="100%" valign="top">
 ### [Hermes Agent](https://github.com/NousResearch/hermes-agent)
 Self-improving AI agent framework with skill learning loop, messaging gateway, 7 terminal backends. Runs on [cloud host] with DeepSeek V4.
 
 `Self-improving` `Skill Loop` `[cloud host]` `DeepSeek V4` `the orchestration engine`
-
 </td>
 </tr>
 </table>
