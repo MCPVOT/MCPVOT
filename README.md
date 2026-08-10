@@ -101,6 +101,21 @@ Self-improving AI agent framework with skill learning loop, messaging gateway, 7
 
 ---
 
+## My Agent Stack
+
+How I actually build: **one harness, three workers** — all open-source, API-driven, no subscriptions.
+
+| Tool | Role | Why |
+|---|---|---|
+| **[Hermes Agent](https://github.com/NousResearch/hermes-agent)** | The harness (the brain) | Self-improving via skills + persistent memory, multi-platform gateway (Telegram/Discord/Slack/WhatsApp), cron, MCP, 20+ providers |
+| **[OpenCode](https://github.com/opencode-ai/opencode)** | Worker 1 | Fast coding agent, CLI-native, my default sub-agent on the 2× plan |
+| **[Cline](https://github.com/cline/cline)** | Worker 2 | Autonomous coding with MCP tool access |
+| **[Codex](https://github.com/openai/codex)** | Worker 3 | Parallel lane — features, PR reviews, batch fixes, dual-provider (OpenRouter + GO) |
+
+**The pattern:** Hermes decides, routes, and verifies; the three workers execute in parallel (research fan-outs, bug-hunts, reviews). Skill files + keyed memory make the stack portable — swap any harness and the layer survives.
+
+---
+
 ## Tech Stack
 
 | | Technologies |
