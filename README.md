@@ -105,41 +105,17 @@ Self-improving AI agent framework with skill learning loop, messaging gateway, 7
 
 This is how the swarm actually works — not theory, not a roadmap. This is live infrastructure running across a a production node and a [cloud host] server, coordinating multiple AI agents that build, monitor, and ship autonomously.
 
-### The Swarm Coordination Split
+### The Swarm is the Moat
 
-The system runs on two machines with a hard boundary between them:
+The real differentiator isn't the harness, the workers, or any single tool — it's the **coordination layer**: how a fleet of AI agents dispatch work, guard security, and audit code while no human is watching. This runs 24×7 across a a production node and a [cloud host] server. The wiring between agents is the moat.
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    deployment                  │
-│                                                         │
-│  6 Hermes profiles → isolated seats                     │
-│  ├── Orchestrator (decides, routes, verifies)           │
-│  ├── Sub-agent dispatch (Cline + OpenCode + Codex)      │
-│  ├── Computer-use / browser automation                  │
-│  ├── Reports, traces, interactive engineering            │
-│  └── secure agent mesh bridge to remote node                  │
-│                                                         │
-│  SECRET: [private credentials], browser sessions, architect keys   │
-└────────────────────────┬────────────────────────────────┘
-                         │ secure agent mesh VPN (encrypted)
-                         │ Shared: skills, memories, repo,
-                         │ OpenRouter key, sub-agent configs
-┌────────────────────────┴────────────────────────────────┐
-│                  autonomous worker (autonomous 24×7)               │
-│                                                         │
-│  Hermes gateway + cron (never sleeps)                   │
-│  ├── persistent agent memory memory engine (~/.agent-memory sessions)       │
-│  ├── automated security security lane (ports, secrets, spend)     │
-│  ├── OpenCode ()                             │
-│  ├── Codex lane (parallel PRs, batch fixes)              │
-│  └── Autonomous maintenance + health checks              │
-│                                                         │
-│  EXCLUDES: [private credentials], interactive browser, reports     │
-└─────────────────────────────────────────────────────────┘
-```
+Every task flows through a coordinated swarm that does three things autonomously:
 
-**The rule:** node-only content never moves to the server. The server `.env` excludes interactive credentials. Shared config (skills, memories, model config, sub-agent configs) stays in sync across both machines explicitly.
+**1 · Coordinate.** The Orchestrator decides, routes, and verifies. Sub-agents (OpenCode, Cline, Codex) execute in parallel — one task per agent, isolated workdirs, each with a completion ritual that writes findings to disk. No agent trusts another agent's self-report; every output is verified before it counts.
+
+**2 · Enforce security.** automated security runs as an always-on security lane — network port scans, secret-scanning across repos and logs, credential-permission enforcement, and spend monitoring. Every agent commit uses a neutral identity, secrets never leave `.env`, and any token that surfaces in a transcript gets rotated on sight.
+
+**3 · Audit code autonomously.** A deep memory engine (persistent agent memory) + a recursive language-model forge (the orchestration engine with evidence gating evidence gating) review changes through bounded recursive calls. The 3-stage evaluation gate (`lint → typecheck → integration`) runs before anything merges. The swarm catches what a solo coder would miss — and it does it on schedule, not on mood.
 
 ### The Trilogy
 
