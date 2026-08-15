@@ -157,11 +157,11 @@ Each profile:
 
 The Orchestrator dispatches tasks to workers. Each worker gets one task, an isolated workdir, and a completion ritual (write findings to a file). Worker self-reports are **not trusted facts** — the Orchestrator verifies every output.
 
-| Worker | Role | Provider | Lane |
-|---|---|---|---|
-| **[OpenCode](https://github.com/opencode-ai/opencode)** | Fast coding agent, CLI-native, default sub-agent | OpenCode | Primary builder |
-| **[Cline](https://github.com/cline/cline)** | Autonomous coding with MCP tool access | Subscription | MCP-integrated worker |
-| **[Codex](https://github.com/openai/codex)** | Parallel lane — features, PR reviews, batch fixes | OpenRouter (shared key) | Parallel fan-out |
+| Worker | Role | Lane |
+|---|---|---|
+| **[OpenCode](https://github.com/opencode-ai/opencode)** | Fast coding agent, CLI-native, default sub-agent | Primary builder |
+| **[Cline](https://github.com/cline/cline)** | Autonomous coding with MCP tool access | MCP-integrated worker |
+| **[Codex](https://github.com/openai/codex)** | Parallel lane — features, PR reviews, batch fixes | Parallel fan-out |
 
 **Dispatch patterns:**
 - **delegate_task** — quick parallel subtasks (minutes). Each child gets isolated context + terminal. Only the summary returns. Orchestrator verifies.
@@ -272,10 +272,10 @@ How I actually build: **one harness, three workers** — all open-source, API-dr
 
 | Tool | Role | Why |
 |---|---|---|
-| **[Hermes Agent](https://github.com/NousResearch/hermes-agent)** | The harness (the brain) | Self-improving via skills + persistent memory, multi-platform gateway (Telegram/Discord/Slack/WhatsApp), cron, MCP, 20+ providers |
-| **[OpenCode](https://github.com/opencode-ai/opencode)** | Worker 1 | Fast coding agent, CLI-native, my default sub-agent on the 2× plan |
+| **[Hermes Agent](https://github.com/NousResearch/hermes-agent)** | The harness (the brain) | Self-improving via skills + persistent memory, multi-platform gateway (Telegram/Discord/Slack/WhatsApp), cron, MCP |
+| **[OpenCode](https://github.com/opencode-ai/opencode)** | Worker 1 | Fast coding agent, CLI-native, my default sub-agent |
 | **[Cline](https://github.com/cline/cline)** | Worker 2 | Autonomous coding with MCP tool access |
-| **[Codex](https://github.com/openai/codex)** | Worker 3 | Parallel lane — features, PR reviews, batch fixes, dual-provider (OpenRouter + GO) |
+| **[Codex](https://github.com/openai/codex)** | Worker 3 | Parallel lane — features, PR reviews, batch fixes, dual-provider |
 
 **The pattern:** Hermes decides, routes, and verifies; the three workers execute in parallel (research fan-outs, bug-hunts, reviews). Skill files + keyed memory make the stack portable — swap any harness and the layer survives.
 
