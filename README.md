@@ -162,7 +162,7 @@ PROFILES (node)
 ├── Workspace A — the coordination brain, secure agent mesh bridge
 ├── Workspace B — project operations seat (Next.js, deploy gate)
 ├── Workspace C — project operations seat (streetwear, Three.js)
-├── Workspace D — CRM seat (Rust middleware , API bridge)
+├── Workspace D — CRM seat (Rust middleware, API bridge)
 ├── Workspace E — agency operations (Laravel, GoHighLevel, 150-market)
 └── Workspace F — orchestrator / cross-project coordination
 
@@ -235,7 +235,7 @@ The development loop — spec-first, validated at every stage:
 Rust powers the middleware layer — high-performance, type-safe API bridges that sit between external services and the agent swarm:
 
 ```
-Rust middleware (axum, port )
+Rust middleware (axum)
 ├── REST API proxy (fans, notes, PPVs, send endpoints)
 ├── Webhook handler (POST /webhooks, HMAC-SHA256 signed)
 ├── SSE fan-out (real-time event streaming to UI)
