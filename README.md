@@ -27,7 +27,7 @@ Building AI-powered tools for Colombian real estate, decentralized autonomous ec
 
 - **Pequi API** — Colombia's first public real estate data API (276 barrios, 18 endpoints) with c402 monetization
 - **x402 Protocol** — HTTP 402 Payment Required for AI agents, deployed on Base mainnet, Coinbase ecosystem listed
-- **Hermes Agent** + **the orchestration engine** — Self-improving AI agents with recursive LM execution, running on [cloud host]
+- **Hermes Agent** + **recursive orchestration engine** — Self-improving AI agents with recursive LM execution, running on DigitalOcean
 - **Multi-model consensus** — LLMs as independent policies aggregated by reward model for legal compliance
 
 ---
@@ -80,9 +80,9 @@ Colombia's first public real estate data API. 18 endpoints, 276 barrios, c402 Pr
 <tr>
 <td width="100%" valign="top">
 ### [Hermes Agent](https://github.com/NousResearch/hermes-agent)
-Self-improving AI agent framework with skill learning loop, messaging gateway, 7 terminal backends. Runs on [cloud host] with DeepSeek V4.
+Self-improving AI agent framework with skill learning loop, messaging gateway, 7 terminal backends. Runs on DigitalOcean with DeepSeek V4.
 
-`Self-improving` `Skill Loop` `[cloud host]` `DeepSeek V4` `the orchestration engine`
+`Self-improving` `Skill Loop` `DigitalOcean` `DeepSeek V4` `recursive orchestration engine`
 </td>
 </tr>
 </table>
@@ -103,11 +103,11 @@ Self-improving AI agent framework with skill learning loop, messaging gateway, 7
 
 ## Agent Swarm Architecture
 
-This is how the swarm actually works — not theory, not a roadmap. This is live infrastructure running across a a production node and a [cloud host] server, coordinating multiple AI agents that build, monitor, and ship autonomously.
+This is how the swarm actually works — not theory, not a roadmap. This is live infrastructure running across a production infrastructure, coordinating multiple AI agents that build, monitor, and ship autonomously.
 
 ### The Swarm is the Moat
 
-The real differentiator isn't the harness, the workers, or any single tool — it's the **coordination layer**: how a fleet of AI agents dispatch work, guard security, and audit code while no human is watching. This runs 24×7 across a a production node and a [cloud host] server. The wiring between agents is the moat.
+The real differentiator isn't the harness, the workers, or any single tool — it's the **coordination layer**: how a fleet of AI agents dispatch work, guard security, and audit code while no human is watching. This runs 24×7 across a production infrastructure. The wiring between agents is the moat.
 
 Every task flows through a coordinated swarm that does three things autonomously:
 
@@ -115,7 +115,7 @@ Every task flows through a coordinated swarm that does three things autonomously
 
 **2 · Enforce security.** automated security runs as an always-on security lane — network port scans, secret-scanning across repos and logs, credential-permission enforcement, and spend monitoring. Every agent commit uses a neutral identity, secrets never leave `.env`, and any token that surfaces in a transcript gets rotated on sight.
 
-**3 · Audit code autonomously.** A deep memory engine (persistent agent memory) + a recursive language-model forge (the orchestration engine with evidence gating evidence gating) review changes through bounded recursive calls. The 3-stage evaluation gate (`lint → typecheck → integration`) runs before anything merges. The swarm catches what a solo coder would miss — and it does it on schedule, not on mood.
+**3 · Audit code autonomously.** A deep memory engine (persistent agent memory) + a recursive language-model forge (recursive orchestration engine) review changes through bounded recursive calls. The 3-stage evaluation gate (`lint → typecheck → integration`) runs before anything merges. The swarm catches what a solo coder would miss — and it does it on schedule, not on mood.
 
 ### The Trilogy
 
@@ -124,7 +124,7 @@ Three roles, one architecture. Every task flows through this pipeline:
 | Role | What it does | What runs it |
 |---|---|---|
 | **Orchestrator** | Decides, routes, verifies, logs decisions. The harness — never a worker. | Hermes Agent (node, interactive) |
-| **knowledge layer** | Knowledge layer. persistent agent memory memory engine + repo source-of-truth. Answers "what do we know?" | persistent agent memory (`~/.agent-memory` sessions) + `source-of-truth docs` |
+| **knowledge layer** | Knowledge layer. persistent agent memory engine + repo source-of-truth. Answers "what do we know?" | persistent agent memory + `source-of-truth docs` |
 | **Architect** | Builds. Sub-agents execute in parallel — one task per agent, isolated workdirs. | Cline + OpenCode (GO 2× path) + Codex (parallel lane) |
 
 **automated security** wraps all three as the security lane: network ports, secret-scanning, credential permissions, spend monitoring. It runs 24×7 on the server and never sleeps.
@@ -170,10 +170,10 @@ The Orchestrator dispatches tasks to workers. Each worker gets one task, an isol
 
 ### persistent agent memory Memory Engine
 
-persistent agent memory is the persistent knowledge layer — the knowledge layer's backbone. It runs on the server and stores session memory across `~/.agents/skills` and `~/.agent-memory` session archives.
+persistent agent memory is the persistent knowledge layer — the knowledge layer's backbone. It runs on the server and stores session memory across `~/.agents/skills` and a persistent memory store session archives.
 
 ```
-persistent agent memory memory graph
+persistent agent memory graph
 ├── Session transcripts (what happened, what worked, what failed)
 ├── Skill library (reusable procedures — the self-improving layer)
 ├── Keyed memory (who the user is, preferences, environment, lessons)
@@ -227,15 +227,15 @@ Rust middleware (axum)
 
 The Rust layer is the bridge between external APIs (rate-limited, plan-gated) and the Hermes profiles that consume them. It handles rate limiting (sliding-window 429s), HMAC verification, and fan-id validation with percent-encoding before URL interpolation.
 
-### the orchestration engine (Recursive Language Model)
+### recursive orchestration engine (Recursive Language Model)
 
-the orchestration engine is the recursive execution engine — a forge where the agent orchestration owns recursion and Hermes performs bounded inner calls.
+recursive orchestration engine is the recursive execution engine — a forge where the agent orchestration owns recursion and Hermes performs bounded inner calls.
 
 ```
-the orchestration engine
-├── evidence gating evidence gating (every recursive call must show evidence)
-├── Bounded inner calls (Hermes executes, the orchestration engine validates)
-├── Deployed on [cloud host] alongside Hermes gateway
+recursive orchestration engine
+├── evidence-gated recursion (every recursive call must show evidence)
+├── Bounded inner calls (Hermes executes, recursive orchestration engine validates)
+├── Deployed on DigitalOcean alongside Hermes gateway
 └── Recursive depth limits (never infinite — always bounded)
 ```
 
@@ -288,8 +288,8 @@ How I actually build: **one harness, three workers** — all open-source, API-dr
 | **Languages** | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-CE422B?style=flat-square&logo=rust&logoColor=white) ![Solidity](https://img.shields.io/badge/Solidity-363636?style=flat-square&logo=solidity&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white) |
 | **Frontend** | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) |
 | **AI / LLM** | ![Claude](https://img.shields.io/badge/Claude-OPUS-7C3AED?style=flat-square) ![DeepSeek](https://img.shields.io/badge/DeepSeek-R1-4A90D9?style=flat-square) ![Qwen](https://img.shields.io/badge/Qwen-3.6_Plus-FF6B35?style=flat-square) ![Ollama](https://img.shields.io/badge/Ollama-Local-000000?style=flat-square) |
-| **AI Platforms** | [OpenRouter](https://openrouter.ai) · [Z.AI](https://z.ai) · [Hermes Agent](https://github.com/NousResearch/hermes-agent) · [the orchestration engine](https://github.com/NousResearch/hermes-agent) · [OpenCode](https://github.com/opencode-ai/opencode) · [Claude Code](https://claude.ai/code) |
-| **Agent Frameworks** | [Hermes Agent](https://github.com/NousResearch/hermes-agent) (NousResearch) — self-improving AI agent with skill learning loop, messaging gateway, 7 terminal backends · [the orchestration engine](https://github.com/NousResearch/hermes-agent) (Q00) — recursive LM forge with evidence gating evidence gating · agent orchestration · MCP Protocol · A2A Protocol · OpenClaw |
+| **AI Platforms** | [OpenRouter](https://openrouter.ai) · [Z.AI](https://z.ai) · [Hermes Agent](https://github.com/NousResearch/hermes-agent) · [recursive orchestration engine](https://github.com/NousResearch/hermes-agent) · [OpenCode](https://github.com/opencode-ai/opencode) · [Claude Code](https://claude.ai/code) |
+| **Agent Frameworks** | [Hermes Agent](https://github.com/NousResearch/hermes-agent) (NousResearch) — self-improving AI agent with skill learning loop, messaging gateway, 7 terminal backends · [recursive orchestration engine](https://github.com/NousResearch/hermes-agent) (Q00) — recursive LM forge with evidence-gated recursion · agent orchestration · MCP Protocol · A2A Protocol · OpenClaw |
 | **Blockchain** | ![Ethereum](https://img.shields.io/badge/Ethereum-L1-3C3C3D?style=flat-square&logo=ethereum&logoColor=white) ![Base](https://img.shields.io/badge/Base-L2-0052FF?style=flat-square&logo=base&logoColor=white) ![Solana](https://img.shields.io/badge/Solana-SVM-9945FF?style=flat-square&logo=solana&logoColor=white) |
 | **Smart Contracts** | ![Solidity](https://img.shields.io/badge/Solidity-EVM-363636?style=flat-square&logo=solidity&logoColor=white) ERC-20 · ERC-721 · ERC-1155 · ERC-4804 · Uniswap V4 · Chainlink VRF · x402 Protocol |
 | **Payments / Monetization** | x402 V2 Facilitator (Base mainnet) · **c402 Protocol** (HTTP 402 — Wompi + Redis · zero crypto) · Wompi Web Checkout · PSE · Nequi · Daviplata · COP pricing · Prepaid Credits · Subscriptions |
