@@ -218,8 +218,7 @@ Rust middleware (axum)
 <a href="https://mcpvot.github.io"><b>🌐 mcpvot.github.io</b></a> ·
 <a href="https://mcpvot.xyz"><b>x402 facilitator</b></a> ·
 <a href="https://xpequi.xyz"><b>xpequi.xyz</b></a> ·
-<a href="https://twitter.com/MCPVOT"><b>X @MCPVOT</b></a> ·
-<a href="https://t.me/McpvotBot"><b>Telegram</b></a>
+<a href="https://twitter.com/MCPVOT"><b>X @MCPVOT</b></a>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:0d1117,50:00ff88,100:00e5ff&height=70&section=footer" width="100%" />
