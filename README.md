@@ -32,6 +32,8 @@
 
 **AI Architek** — I design and run autonomous multi-agent systems in production. An orchestrating harness routes work to specialist sub-agents, a **council of models** (each LLM an independent policy, aggregated by a reward model) returns one high-confidence answer, and **persistent cross-session memory** keeps design intent alive across every build.
 
+> The whole system runs as live agent infrastructure on **DigitalOcean**: Hermes agents with **600+ versioned skills** loaded on demand, workflow gates, and a council where models reason independently before reconciling. When the agents lack a capability, I build it — a new agent, a sub-agent, a custom skill, or an MCP plugin. That is the operating method.
+
 > MCP tooling built on the latest Model Context Protocol spec (**2026-07-28**): **stateless servers over Streamable HTTP** — no session storage, horizontally scalable by default.
 
 - 🤖 **Agent Swarm (production)** — orchestrator + specialist sub-agents (OpenCode · Cline · Codex), one task per agent, isolated workspaces, every output verified before it counts
@@ -182,9 +184,9 @@ Rust middleware (axum)
 
 | | Technologies |
 |---|---|
-| **Languages** | TypeScript · Python · **Rust** · Solidity · SQL |
-| **Frontend** | Next.js 16 · React 19 · Tailwind CSS · Three.js / R3F |
-| **Backend / DB** | Prisma · Neon PostgreSQL · Supabase · Redis (Upstash) · Rust (axum) middleware |
+| **Languages** | TypeScript · Python · **Go** · **Rust** · **PHP** · Solidity · SQL |
+| **Frontend** | Next.js 16 · React 19 · HTMX (server-driven UI) · Tailwind CSS · Three.js / R3F |
+| **Backend / DB** | **PostgreSQL** · **MySQL** · **MongoDB** · Prisma · Neon PostgreSQL · Supabase · Redis (Upstash) · Rust (axum) middleware |
 | **AI / Agents** | DeepSeek V4 · Claude · OpenRouter · Groq · Hermes Agent · Council of Models |
 | **ML / RL** | PPO · GRPO · RLVR · Reward-model aggregation |
 | **Payments** | x402 Facilitator · c402 Protocol · Wompi · PSE / Nequi · Shopify |
