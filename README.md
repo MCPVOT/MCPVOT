@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://mcpvot.github.io"><img src="https://img.shields.io/badge/%F0%9F%A7%A0_AI_ARCHITEK-00e5ff?style=for-the-badge&labelColor=0d1117" /></a>
+  <a href="https://mcpvot.github.io"><img src="https://img.shields.io/badge/AI_ARCHITEK-00e5ff?style=for-the-badge&labelColor=0d1117" /></a>
   <a href="https://mcpvot.github.io"><img src="https://img.shields.io/badge/Agent_Swarm-24%2F7-00ff88?style=for-the-badge&labelColor=0d1117" /></a>
   <a href="https://mcpvot.xyz"><img src="https://img.shields.io/badge/x402_Facilitator-FF6B35?style=for-the-badge&labelColor=0d1117" /></a>
 </p>
@@ -28,24 +28,24 @@
 
 ---
 
-## 🧠 About — AI Architek
+<img src="https://mcpvot.github.io/svg/about.svg" width="100%" alt="About — AI Architek" />
 
-**AI Architek** — I design and run autonomous multi-agent systems in production. An orchestrating harness routes work to specialist sub-agents, a **council of models** (each LLM an independent policy, aggregated by a reward model) returns one high-confidence answer, and **persistent cross-session memory** keeps design intent alive across every build.
+**AI Architek** — I design and run autonomous multi-agent systems in production. Not one harness: a **fleet of them**. Each is a full runtime — Hermes agents, a DeepSeek harness, tiny focused worker harnesses — with its own memory, sessions, cron, and secrets. A **council of models** (each LLM an independent policy, aggregated by a reward model) returns one high-confidence answer, and **persistent cross-session memory** keeps design intent alive across every build.
 
 > The whole system runs as live agent infrastructure on **DigitalOcean**: Hermes agents with **600+ versioned skills** loaded on demand, workflow gates, and a council where models reason independently before reconciling. When the agents lack a capability, I build it — a new agent, a sub-agent, a custom skill, or an MCP plugin. That is the operating method.
 
 > MCP tooling built on the latest Model Context Protocol spec (**2026-07-28**): **stateless servers over Streamable HTTP** — no session storage, horizontally scalable by default.
 
-- 🤖 **Agent Swarm (production)** — orchestrator + specialist sub-agents (OpenCode · Cline · Codex), one task per agent, isolated workspaces, every output verified before it counts
-- 🔒 **Security automation lane** — secret-scanning, credential hygiene, spend monitoring, always-on
-- ⚙️ **Rust & CRM middleware** — axum API bridges: HMAC-signed webhooks, SSE fan-out, rate limiting, honest error models (never false success)
-- 💸 **x402 Protocol** — HTTP 402 payments for AI agents on Base mainnet, listed in the Coinbase ecosystem
-- 🇨🇴 **c402 Protocol** — Colombia-first HTTP 402 monetization: Wompi checkout (PSE · Nequi · Daviplata), zero-crypto Redis settlement
-- 🏢 **CRM & agency ops** — multi-tenant client portals, dashboards, GoHighLevel automation across 150+ markets
+- **Agent Swarm (production)** — a fleet of specialized harnesses under one orchestrator: Hermes as the architecture seat, DeepSeek as the fast lane, tiny worker harnesses for bounded tasks. Sub-agents (OpenCode · Cline · Codex) execute in parallel, one task per agent, isolated workspaces, every output verified before it counts.
+- **Security automation lane** — secret-scanning, credential hygiene, spend monitoring, always-on
+- **Rust & CRM middleware** — axum API bridges: HMAC-signed webhooks, SSE fan-out, rate limiting, honest error models (never false success)
+- **x402 Protocol** — HTTP 402 payments for AI agents on Base mainnet, listed in the Coinbase ecosystem
+- **c402 Protocol** — Colombia-first HTTP 402 monetization: Wompi checkout (PSE · Nequi · Daviplata), zero-crypto Redis settlement
+- **CRM & agency ops** — multi-tenant client portals, dashboards, GoHighLevel automation across 150+ markets
 
 ---
 
-## 🚀 Projects
+<img src="https://mcpvot.github.io/svg/projects.svg" width="100%" alt="Projects" />
 
 <table>
 <tr>
@@ -116,7 +116,7 @@ Self-improving AI agent framework by NousResearch: skill learning loop, persiste
 
 ---
 
-## 🕸️ Agent Swarm Architecture
+<img src="https://mcpvot.github.io/svg/swarm.svg" width="100%" alt="Agent Swarm Architecture" />
 
 *Not theory — live production infrastructure.*
 
@@ -171,7 +171,7 @@ Rust middleware (axum)
 
 ---
 
-## 🧰 Automation & DevOps
+<img src="https://mcpvot.github.io/svg/automation.svg" width="100%" alt="Automation & DevOps" />
 
 | | |
 |---|---|
@@ -180,7 +180,7 @@ Rust middleware (axum)
 
 ---
 
-## 🛠️ Tech Stack
+<img src="https://mcpvot.github.io/svg/stack.svg" width="100%" alt="Tech Stack" />
 
 | | Technologies |
 |---|---|
@@ -196,7 +196,7 @@ Rust middleware (axum)
 
 ---
 
-## 🎓 Certifications
+<img src="https://mcpvot.github.io/svg/certs.svg" width="100%" alt="Certifications" />
 
 | | | |
 |---|---|---|
@@ -206,18 +206,22 @@ Rust middleware (axum)
 
 ---
 
-## 📈 GitHub Stats
+<img src="https://mcpvot.github.io/svg/stats.svg" width="100%" alt="GitHub Stats" />
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=MCPVOT&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=00ff88&icon_color=00e5ff&text_color=e8f4f8&hide=issues" alt="GitHub Stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MCPVOT&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=00ff88&text_color=e8f4f8" alt="Top Languages" />
+  <p align="center">
+  <img height="170" src="https://mcpvot.github.io/svg/stack-card.svg" alt="Languages in rotation — TypeScript, Python, Go, Rust, PHP, Solidity, SQL" />
+</p>
+
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=MCPVOT&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=00ff88&icon_color=00e5ff&text_color=e8f4f8&hide=issues" alt="GitHub Stats" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MCPVOT&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=00ff88&text_color=e8f4f8&langs_count=8" alt="Top Languages" />
 </p>
 
 ---
 
-## 🔗 Connect
+<img src="https://mcpvot.github.io/svg/connect.svg" width="100%" alt="Connect" />
 
-<a href="https://mcpvot.github.io"><b>🌐 mcpvot.github.io</b></a> ·
+<a href="https://mcpvot.github.io"><b>mcpvot.github.io</b></a> ·
 <a href="https://mcpvot.xyz"><b>x402 facilitator</b></a> ·
 <a href="https://xpequi.xyz"><b>xpequi.xyz</b></a> ·
 <a href="https://twitter.com/MCPVOT"><b>X @MCPVOT</b></a>
