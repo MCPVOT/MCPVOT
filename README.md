@@ -1,8 +1,8 @@
-<h1 align="center">
+<p align="center">
   <a href="https://github.com/MCPVOT">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=2800&pause=900&color=00FF88&center=true&vCenter=true&multiline=false&repeat=true&width=640&height=52&lines=AI+ARCHITEK;Autonomous+Agent+Systems+%7C+MCP+%7C+x402;Rust+%26+CRM+Middleware;Council-of-Models+Consensus;Real+Estate+AI+%7C+Base+%7C+Solana" alt="Typing SVG" />
+    <img src="https://mcpvot.github.io/svg/hero.svg" width="640" alt="AI Architek - autonomous agent systems, MCP, x402" />
   </a>
-</h1>
+</p>
 
 <p align="center">
   <a href="https://mcpvot.github.io"><img src="https://img.shields.io/badge/AI_ARCHITEK-00e5ff?style=for-the-badge&labelColor=0d1117" /></a>
