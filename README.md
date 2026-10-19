@@ -121,7 +121,7 @@ Personal AI agent with cross-platform MCP integration built on Claude.
 <tr>
 <td width="50%" valign="top">
 
-### [mcp-contract-probe](https://github.com/MCPVOT/mcp-contract-probe) · Go
+### mcp-contract-probe · Go  `private`
 Verifies an MCP server's advertised tool surface against a published contract over Streamable HTTP (2026-07-28 spec). Record once, verify in CI and after every deploy. Exit 1 on drift. Zero dependencies.
 
 `Go` `MCP` `Streamable HTTP` `CI Gate`
@@ -129,7 +129,7 @@ Verifies an MCP server's advertised tool surface against a published contract ov
 </td>
 <td width="50%" valign="top">
 
-### [webhook-signature-guard](https://github.com/MCPVOT/webhook-signature-guard) · PHP
+### webhook-signature-guard · PHP  `private`
 HMAC-SHA256 and RSA-SHA256 webhook verification with timing-safe compare and a signed-timestamp window for replay protection. 11 self-tests. PHP 8.1+, zero dependencies.
 
 `PHP` `HMAC` `RSA-SHA256` `Webhooks`
@@ -139,7 +139,7 @@ HMAC-SHA256 and RSA-SHA256 webhook verification with timing-safe compare and a s
 <tr>
 <td width="50%" valign="top">
 
-### [hmac-verify](https://github.com/MCPVOT/hmac-verify) · Rust
+### hmac-verify · Rust  `private`
 Verify HMAC-SHA256 signatures from stdin with a constant-time compare. Single binary for CI and deploy gates. Interop-checked against `openssl dgst`.
 
 `Rust` `HMAC-SHA256` `CLI` `CI Gate`
