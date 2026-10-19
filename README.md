@@ -119,6 +119,42 @@ Personal AI agent with cross-platform MCP integration built on Claude.
 </td>
 </tr>
 <tr>
+<td width="50%" valign="top">
+
+### [mcp-contract-probe](https://github.com/MCPVOT/mcp-contract-probe) · Go
+Verifies an MCP server's advertised tool surface against a published contract over Streamable HTTP (2026-07-28 spec). Record once, verify in CI and after every deploy. Exit 1 on drift. Zero dependencies.
+
+`Go` `MCP` `Streamable HTTP` `CI Gate`
+
+</td>
+<td width="50%" valign="top">
+
+### [webhook-signature-guard](https://github.com/MCPVOT/webhook-signature-guard) · PHP
+HMAC-SHA256 and RSA-SHA256 webhook verification with timing-safe compare and a signed-timestamp window for replay protection. 11 self-tests. PHP 8.1+, zero dependencies.
+
+`PHP` `HMAC` `RSA-SHA256` `Webhooks`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### [hmac-verify](https://github.com/MCPVOT/hmac-verify) · Rust
+Verify HMAC-SHA256 signatures from stdin with a constant-time compare. Single binary for CI and deploy gates. Interop-checked against `openssl dgst`.
+
+`Rust` `HMAC-SHA256` `CLI` `CI Gate`
+
+</td>
+<td width="50%" valign="top">
+
+### [Claude Agent MCP](https://github.com/MCPVOT/claude-agent-mcp)
+Personal AI agent with cross-platform MCP integration built on Claude.
+
+`Python` `MCP Protocol` `Claude API`
+
+</td>
+</tr>
+<tr>
 <td width="100%" valign="top">
 
 ### [Hermes Agent](https://github.com/NousResearch/hermes-agent) — the harness
@@ -230,7 +266,7 @@ Rust middleware (axum)
 </p>
 
 <img height="165" src="https://github-readme-stats.vercel.app/api?username=MCPVOT&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=00ff88&icon_color=00e5ff&text_color=e8f4f8&hide=issues" alt="GitHub Stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MCPVOT&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=00ff88&text_color=e8f4f8&langs_count=8" alt="Top Languages" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MCPVOT&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=00ff88&text_color=e8f4f8&langs_count=12&size_weight=0.5&count_weight=0.5" alt="Top Languages" />
 </p>
 
 ---
