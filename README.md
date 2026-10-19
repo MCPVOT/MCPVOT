@@ -26,6 +26,22 @@
   <img src="https://komarev.com/ghpvc/?username=MCPVOT&style=flat-square&color=00ff88&label=Profile+views" alt="Profile views" />
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white&labelColor=0d1117" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=0d1117" alt="Python" />
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white&labelColor=0d1117" alt="Go" />
+  <img src="https://img.shields.io/badge/Rust-CE422B?style=flat-square&logo=rust&logoColor=white&labelColor=0d1117" alt="Rust" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white&labelColor=0d1117" alt="PHP" />
+  <img src="https://img.shields.io/badge/Solidity-363636?style=flat-square&logo=solidity&logoColor=white&labelColor=0d1117" alt="Solidity" />
+  <img src="https://img.shields.io/badge/HTMX-3366CC?style=flat-square&labelColor=0d1117" alt="HTMX" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white&labelColor=0d1117" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white&labelColor=0d1117" alt="MySQL" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white&labelColor=0d1117" alt="MongoDB" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white&labelColor=0d1117" alt="Redis" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white&labelColor=0d1117" alt="Docker" />
+  <img src="https://img.shields.io/badge/DigitalOcean-0080FF?style=flat-square&logo=digitalocean&logoColor=white&labelColor=0d1117" alt="DigitalOcean" />
+</p>
+
 ---
 
 <img src="https://mcpvot.github.io/svg/about.svg" width="100%" alt="About — AI Architek" />

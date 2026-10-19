@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aldo Villamil — AI Architek · Autonomous Agent Systems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000000;
+    --card: #111111;
+    --card-deep: #0a0a0a;
+    --border: #222222;
+    --border-soft: #1a1a1a;
+    --cyan: #00d9ff;
+    --green: #00ff88;
+    --orange: #ff6b35;
+    --teal: #00efb9;
+    --text: #f0f0f0;
+    --muted: #b0b0b0;
+    --faint: #7d8590;
+  }
+  @page { margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #000000; }
+  body { font-family: 'Inter', sans-serif; color: var(--muted); -webkit-font-smoothing: antialiased; }
+  .poster { width: 1100px; background: var(--bg); position: relative; margin: 0 auto; padding: 56px 52px 64px; overflow: hidden; }
+  .header { text-align: center; position: relative; padding-bottom: 36px; }
+  .header-glow { position: absolute; top: 0; left: 15%; width: 70%; height: 220px; background: radial-gradient(ellipse at center, rgba(0,217,255,0.10) 0%, rgba(0,217,255,0.0) 70%); pointer-events: none; }
+  .name { font-size: 46px; font-weight: 900; letter-spacing: 0.06em; color: var(--cyan); margin: 0 0 10px; text-shadow: 0 0 18px rgba(0,217,255,0.28); }
+  .tagline { font-size: 14.5px; font-weight: 600; letter-spacing: 0.14em; color: #c9ced6; margin: 0 0 22px; }
+  .tagline .sep { color: var(--cyan); margin: 0 4px; }
+  .chip-rows { margin-bottom: 22px; }
+  .contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 100%; margin-bottom: 10px; }
+  .chip { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 500; padding: 6px 14px; border-radius: 999px; line-height: 1.2; white-space: nowrap; text-decoration: none; }
+  .chip-solid { background: #161616; border: 1px solid var(--border); color: #d7dbe0; }
+  .chip-cyan   { border: 1px solid rgba(0,217,255,0.55);  color: var(--cyan);   background: rgba(0,217,255,0.05); }
+  .chip-green  { border: 1px solid rgba(0,255,136,0.50);  color: var(--green);  background: rgba(0,255,136,0.05); }
+  .chip-orange { border: 1px solid rgba(255,107,53,0.55); color: var(--orange); background: rgba(255,107,53,0.06); }
+  .chip-teal   { border: 1px solid rgba(0,239,185,0.50);  color: var(--teal);   background: rgba(0,239,185,0.05); }
+  .stats { display: flex; flex-wrap: wrap; justify-content: space-between; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px 26px; }
+  .stat { text-align: center; flex: 1 1 auto; min-width: 120px; }
+  .stat + .stat { border-left: 1px solid var(--border-soft); }
+  .stat-num { display: block; font-size: 30px; font-weight: 800; letter-spacing: 0.02em; line-height: 1.1; margin-bottom: 6px; }
+  .stat-label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; color: var(--faint); text-transform: uppercase; }
+  .section { margin-top: 40px; }
+  .section-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .section-bar { width: 4px; height: 24px; background: var(--cyan); border-radius: 2px; box-shadow: 0 0 10px rgba(0,217,255,0.5); flex-shrink: 0; }
+  .section-title { font-size: 21px; font-weight: 800; color: #ffffff; margin: 0; letter-spacing: 0.01em; }
+  .section-comment { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--faint); margin: 0 0 18px 16px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
+  .body-text { font-size: 14px; line-height: 1.65; color: var(--muted); margin: 0; overflow-wrap: break-word; }
+  .body-text b, .body-text strong { color: #e8eaee; font-weight: 600; }
+  .body-text .hl-cyan { color: var(--cyan); font-weight: 600; }
+  .body-text .hl-green { color: var(--green); font-weight: 600; }
+  .body-text .hl-orange { color: var(--orange); font-weight: 600; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .arch-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .arch-card.b-orange { border-left: 3px solid var(--orange); }
+  .arch-card.b-cyan   { border-left: 3px solid var(--cyan); }
+  .arch-card.b-green  { border-left: 3px solid var(--green); }
+  .arch-tag { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px; }
+  .arch-card.b-orange .arch-tag { color: var(--orange); }
+  .arch-card.b-cyan .arch-tag   { color: var(--cyan); }
+  .arch-card.b-green .arch-tag  { color: var(--green); }
+  .arch-title { font-size: 16px; font-weight: 700; color: #ffffff; margin: 0 0 4px; }
+  .arch-comment { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--faint); margin: 0 0 10px; }
+  .arch-body { font-size: 13px; line-height: 1.6; color: var(--muted); margin: 0; }
+  .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .proj-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; }
+  .proj-top { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+  .proj-num { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; color: #3a3f46; }
+  .proj-name { font-size: 17px; font-weight: 800; color: #ffffff; }
+  .live-badge { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; color: var(--green); border: 1px solid rgba(0,255,136,0.4); background: rgba(0,255,136,0.06); border-radius: 4px; padding: 2px 7px; white-space: nowrap; }
+  .proj-desc { font-size: 12.5px; line-height: 1.6; color: var(--muted); margin: 12px 0 0; flex-grow: 1; }
+  .proj-visit { display: inline-block; margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: var(--green); text-decoration: none; }
+  .proj-visit .arr { color: var(--cyan); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; max-width: 100%; }
+  .tchip { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 500; padding: 3px 9px; border-radius: 6px; background: #161616; border: 1px solid var(--border); color: #c3c8cf; white-space: nowrap; }
+  .tchip.c-cyan   { color: var(--cyan);   border-color: rgba(0,217,255,0.45); }
+  .tchip.c-green  { color: var(--green);  border-color: rgba(0,255,136,0.40); }
+  .tchip.c-orange { color: var(--orange); border-color: rgba(255,107,53,0.45); }
+  .tchip.c-teal   { color: var(--teal);   border-color: rgba(0,239,185,0.40); }
+  .featured { margin-top: 14px; background: var(--card-deep); border: 1px solid rgba(0,217,255,0.55); border-radius: 14px; padding: 26px 28px; box-shadow: 0 0 28px rgba(0,217,255,0.14), inset 0 0 60px rgba(0,217,255,0.03); position: relative; }
+  .featured-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--cyan); letter-spacing: 0.14em; margin-bottom: 10px; }
+  .featured-title-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+  .featured-title { font-size: 20px; font-weight: 800; color: #ffffff; margin: 0; }
+  .featured-body { font-size: 13.5px; line-height: 1.65; color: #c3c8cf; margin: 14px 0 0; }
+  .featured-visit { display: inline-block; margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; color: var(--green); text-decoration: none; border: 1px solid rgba(0,255,136,0.45); background: rgba(0,255,136,0.05); padding: 8px 16px; border-radius: 8px; }
+  .stack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .stack-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+  .stack-cat { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; color: var(--cyan); margin: 0 0 12px; text-transform: uppercase; }
+  .stack-box.k-green .stack-cat { color: var(--green); }
+  .stack-box.k-orange .stack-cat { color: var(--orange); }
+  .stack-box.k-teal .stack-cat { color: var(--teal); }
+  .job { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-title-row { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+  .job-title { font-size: 15.5px; font-weight: 700; color: #ffffff; margin: 0; }
+  .job-company { color: var(--green); font-weight: 700; }
+  .job-meta { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #9aa1ab; background: #181818; border: 1px solid var(--border-soft); border-radius: 6px; padding: 3px 10px; margin: 6px 0 12px; }
+  .job ul { margin: 0; padding: 0; list-style: none; }
+  .job li { font-size: 13px; line-height: 1.6; color: var(--muted); padding-left: 20px; position: relative; margin-bottom: 5px; }
+  .job li:last-child { margin-bottom: 0; }
+  .job li::before { content: '\25B9'; position: absolute; left: 0; color: var(--green); font-size: 13px; text-shadow: 0 0 8px rgba(0,255,136,0.4); }
+  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .edu-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; }
+  .edu-degree { font-size: 15.5px; font-weight: 700; color: #ffffff; margin: 0 0 4px; }
+  .edu-school { font-size: 13px; color: var(--green); font-weight: 600; margin: 0 0 4px; }
+  .edu-meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--faint); margin: 0; }
+  .edu-list { margin: 8px 0 0; padding: 0; list-style: none; }
+  .edu-list li { font-size: 12.5px; color: var(--muted); padding-left: 18px; position: relative; margin-bottom: 4px; line-height: 1.5; }
+  .edu-list li::before { content: '\25B8'; position: absolute; left: 0; color: var(--cyan); text-shadow: 0 0 8px rgba(0,217,255,0.4); }
+  .quote-box { margin-top: 16px; border: 1.5px solid rgba(0,255,136,0.5); border-radius: 10px; background: rgba(0,255,136,0.03); padding: 14px 22px; text-align: center; font-size: 13px; font-style: italic; color: #c9ced6; }
+</style>
+</head>
+<body>
+<div class="poster">
+<header class="header">
+  <div class="header-glow"></div>
+  <h1 class="name">ALDO VILLAMIL</h1>
+  <p class="tagline">AI ARCHITEK <span class="sep">·</span> AUTONOMOUS AGENT SYSTEMS <span class="sep">·</span> MCP <span class="sep">·</span> WEB3 <span class="sep">·</span> CO-FOUNDER</p>
+  <div class="chip-rows">
+    <div class="contact-row">
+      <span class="chip chip-solid">📧 Aldo728@gmail.com</span>
+      <span class="chip chip-solid">🇨🇴 +57 318 318 9499</span>
+      <span class="chip chip-solid">📍 Ibagué, Colombia (US hours)</span>
+    </div>
+    <div class="contact-row">
+      <a class="chip chip-cyan" href="https://mcpvot.github.io">🌐 mcpvot.github.io</a>
+      <a class="chip chip-green" href="https://mcpvot.xyz">⚡ mcpvot.xyz</a>
+      <a class="chip chip-orange" href="https://xpequi.xyz">🏠 xpequi.xyz</a>
+      <a class="chip chip-teal" href="https://github.com/MCPVOT">💻 github.com/MCPVOT</a>
+      <a class="chip chip-cyan" href="https://mcpvot.eth.limo">🔗 mcpvot.eth</a>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><span class="stat-num" style="color:var(--cyan)">3</span><span class="stat-label">Live Products</span></div>
+    <div class="stat"><span class="stat-num" style="color:var(--green)">20+</span><span class="stat-label">Years CS/Ops</span></div>
+    <div class="stat"><span class="stat-num" style="color:var(--orange)">4</span><span class="stat-label">Open-Source</span></div>
+    <div class="stat"><span class="stat-num" style="color:var(--teal)">3</span><span class="stat-label">AMD Certs</span></div>
+    <div class="stat"><span class="stat-num" style="color:var(--green)">ES/EN</span><span class="stat-label">Bilingual</span></div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="section-head"><div class="section-bar"></div><h2 class="section-title">Summary</h2></div>
+  <div class="card">
+    <p class="body-text">
+      <b>AI Architek designing and running autonomous multi-agent systems in production.</b> Not one harness: a
+      fleet of them — Hermes, a DeepSeek harness, and focused worker harnesses, each a full runtime with its own
+      memory, sessions and scheduled work — routing tasks to specialist sub-agents (OpenCode / Cline / Codex). A
+      council of models — each LLM an independent policy aggregated by a reward model — returns one high-confidence
+      answer; persistent cross-session memory keeps design intent alive. 600+ versioned skills load on demand; when
+      the agents lack a capability, I build it: a new agent, a sub-agent, a custom skill, or an MCP plugin. Shipped end-to-end: an AI real-estate platform with
+      Colombian legal compliance (<span class="hl-green">Pequi, live</span>), an on-chain x402 payment facilitator
+      listed in the <span class="hl-cyan">Coinbase ecosystem</span>, and Colombia's first public real-estate API
+      monetized with the <span class="hl-orange">c402 HTTP-402 protocol</span>. Go, Rust &amp; CRM middleware (axum,
+      HMAC webhooks, SSE). MCP servers on the latest 2026-07-28 stateless Streamable HTTP spec. Bilingual EN/ES,
+      US time zones, owner from architecture to deployment.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div class="section-bar"></div><h2 class="section-title">AI Architecture &amp; Agent Systems</h2></div>
+  <div class="grid-3">
+    <div class="arch-card b-orange">
+      <div class="arch-tag">Swarm // 24/7</div>
+      <h3 class="arch-title">Agent Swarm</h3>
+      <p class="arch-comment">// orchestrator decides · routes · verifies</p>
+      <p class="arch-body">Specialist sub-agents build in parallel — one task per agent, isolated workspaces. No self-report trusted until verified. Runs 24/7 in production on DigitalOcean with an always-on security lane.</p>
+    </div>
+    <div class="arch-card b-cyan">
+      <div class="arch-tag">Council // Reliability</div>
+      <h3 class="arch-title">Council of Models</h3>
+      <p class="arch-comment">// reliability at the answer level</p>
+      <p class="arch-body">High-stakes questions routed to specialist LLMs as independent policies. Reward-model aggregation returns the single highest-confidence answer.</p>
+    </div>
+    <div class="arch-card b-green">
+      <div class="arch-tag">Pipeline // Spec-First</div>
+      <h3 class="arch-title">Verification &amp; Security Lane</h3>
+      <p class="arch-comment">// spec-first pipeline</p>
+      <p class="arch-body">3-stage gate before merge: lint → typecheck → integration. Secret-scanning across repos/logs, credential hygiene, spend monitoring.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div class="section-bar"></div><h2 class="section-title">Projects — S.D.A.E. Ecosystem</h2></div>
+  <p class="section-comment">// Sustainable · Decentralized · Autonomous · Ecosystem</p>
+  <div class="proj-grid">
+    <div class="proj-card">
+      <div class="proj-top"><span class="proj-num">01</span><span class="proj-name">Pequi</span><span class="live-badge">LIVE</span></div>
+      <div class="chips"><span class="tchip c-cyan">Next.js 16</span><span class="tchip c-cyan">React 19</span><span class="tchip c-green">Clerk</span><span class="tchip c-orange">Wompi</span><span class="tchip c-cyan">Prisma</span><span class="tchip c-green">DeepSeek V4</span><span class="tchip c-teal">GRPO roadmap</span></div>
+      <p class="proj-desc">AI real-estate platform for Colombia. Ley 820-compliant contracts, payments, 15 AI tools, multi-agent chat. Live in Ibagué + Bogotá (276 barrios), c402 monetization.</p>
+      <a class="proj-visit" href="https://xpequi.xyz">VISIT <span class="arr">→</span></a>
+    </div>
+    <div class="proj-card">
+      <div class="proj-top"><span class="proj-num">02</span><span class="proj-name">MCPVOTS</span><span class="live-badge">LIVE</span></div>
+      <div class="chips"><span class="tchip c-orange">Solidity</span><span class="tchip c-cyan">Base</span><span class="tchip c-green">Chainlink VRF</span><span class="tchip c-teal">ERC-1155</span><span class="tchip c-green">USDC</span><span class="tchip c-cyan">Hardhat</span></div>
+      <p class="proj-desc">"Stripe for AI agents": on-chain x402 payment facilitator — autonomous agent-to-agent payments on Base mainnet. Coinbase-ecosystem listed; full test coverage, on-chain verification.</p>
+      <a class="proj-visit" href="https://mcpvot.xyz">VISIT <span class="arr">→</span></a>
+    </div>
+    <div class="proj-card">
+      <div class="proj-top"><span class="proj-num">03</span><span class="proj-name">MCPVotsAGI</span></div>
+      <div class="chips"><span class="tchip c-cyan">Python</span><span class="tchip c-green">AsyncIO</span><span class="tchip c-teal">WebSockets</span><span class="tchip c-orange">Redis</span><span class="tchip c-green">PyPI</span></div>
+      <p class="proj-desc">Multi-model consensus SDK — specialist LLM outputs aggregated by reward model into one high-confidence answer. A2A protocol gateway, Redis-backed persistent memory. <b style="color:#e8eaee">pip install mcpvotsagi</b></p>
+      <a class="proj-visit" href="https://pypi.org/project/mcpvotsagi/">VISIT <span class="arr">→</span></a>
+    </div>
+  </div>
+  <div class="featured">
+    <div class="featured-label">// PROTOCOL — 04</div>
+    <div class="featured-title-row">
+      <h3 class="featured-title">xpequi-api + c402 Protocol</h3>
+      <div class="chips"><span class="tchip c-cyan">REST API</span><span class="tchip c-green">Open Finance</span><span class="tchip c-teal">TS SDK</span><span class="tchip c-orange">Python SDK</span><span class="tchip c-cyan">MCP Server</span><span class="tchip c-green">IPFS</span></div>
+    </div>
+    <p class="featured-body">
+      Colombia's first public real-estate data API — <b style="color:#ffffff">18 endpoints, 276 barrios</b>.
+      c402: Colombia-first HTTP 402 fiat rails (Wompi · PSE · Nequi · Daviplata) with zero-crypto settlement —
+      agents and apps pay per request through local payment rails, no wallet required.
+    </p>
+    <a class="featured-visit" href="https://xpequi.xyz">VISIT XPEQUI.XYZ →</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div class="section-bar"></div><h2 class="section-title">Tech Stack</h2></div>
+  <div class="stack-grid">
+    <div class="stack-box"><p class="stack-cat">Languages</p><div class="chips"><span class="tchip">TypeScript</span><span class="tchip">Python</span><span class="tchip">Go</span><span class="tchip">PHP</span><span class="tchip">Rust</span><span class="tchip">Solidity</span><span class="tchip">SQL</span></div></div>
+    <div class="stack-box k-green"><p class="stack-cat">AI / Agents</p><div class="chips"><span class="tchip">DeepSeek V4</span><span class="tchip">Hermes Agent</span><span class="tchip">OpenCode</span><span class="tchip">Cline</span><span class="tchip">Codex</span><span class="tchip">OpenRouter</span><span class="tchip">Groq</span><span class="tchip">Council of Models</span></div></div>
+    <div class="stack-box k-teal"><p class="stack-cat">MCP</p><div class="chips"><span class="tchip">2026-07-28 Spec</span><span class="tchip">Stateless Servers</span><span class="tchip">Streamable HTTP</span><span class="tchip">MCP Server</span><span class="tchip">Agentic Wallet</span></div></div>
+    <div class="stack-box k-orange"><p class="stack-cat">ML / RL</p><div class="chips"><span class="tchip">PPO</span><span class="tchip">GRPO</span><span class="tchip">RLVR</span><span class="tchip">Reward-Model Aggregation</span></div></div>
+    <div class="stack-box"><p class="stack-cat">Backend / DB</p><div class="chips"><span class="tchip">PostgreSQL</span><span class="tchip">MySQL</span><span class="tchip">MongoDB</span><span class="tchip">Prisma</span><span class="tchip">Neon</span><span class="tchip">Supabase</span><span class="tchip">Redis (Upstash)</span><span class="tchip">Go</span><span class="tchip">Rust (axum)</span><span class="tchip">CRM middleware</span></div></div>
+    <div class="stack-box k-green"><p class="stack-cat">Frontend</p><div class="chips"><span class="tchip">Next.js</span><span class="tchip">React</span><span class="tchip">HTMX (server-driven)</span><span class="tchip">Tailwind CSS</span><span class="tchip">Three.js</span></div></div>
+    <div class="stack-box k-orange"><p class="stack-cat">Automation</p><div class="chips"><span class="tchip">n8n</span><span class="tchip">DeerFlow</span><span class="tchip">VoltAgent</span><span class="tchip">Cron Jobs</span><span class="tchip">Message Queues</span><span class="tchip">GHL 150+ markets</span></div></div>
+    <div class="stack-box"><p class="stack-cat">DevOps</p><div class="chips"><span class="tchip">GitHub Actions</span><span class="tchip">Vercel</span><span class="tchip">DigitalOcean</span><span class="tchip">Docker</span><span class="tchip">Kubernetes (AMD)</span><span class="tchip">Sentry</span><span class="tchip">Nginx</span></div></div>
+    <div class="stack-box k-teal"><p class="stack-cat">Blockchain</p><div class="chips"><span class="tchip">Base</span><span class="tchip">Ethereum</span><span class="tchip">Solana</span><span class="tchip">Chainlink VRF</span><span class="tchip">ERC-1155</span><span class="tchip">ENS</span><span class="tchip">Farcaster</span></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div class="section-bar"></div><h2 class="section-title">Work Experience</h2></div>
+  <div class="job">
+    <div class="job-title-row"><h3 class="job-title">Co-Founder &amp; Full-Stack Developer — <span class="job-company">Village of Thousands</span></h3></div>
+    <p class="job-meta">2021 – Present · Remote</p>
+    <ul>
+      <li>Headless e-commerce: React + Shopify on Vercel, DigitalOcean backend (99.9% uptime).</li>
+      <li>Created brand identity — graffiti-inspired design language; NYFW-featured.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div class="job-title-row"><h3 class="job-title">Digital Marketing Manager — <span class="job-company">PolloRiko.io</span></h3></div>
+    <p class="job-meta">2018 – Present · Houston, TX (Remote)</p>
+    <ul><li>Full digital presence for US restaurant chain: web, SEO, social, AI-generated content.</li></ul>
+  </div>
+  <div class="job">
+    <div class="job-title-row"><h3 class="job-title">Customer Service — <span class="job-company">United Health Care (Teleperformance)</span></h3></div>
+    <p class="job-meta">2020 – 2021 · Ibagué, Colombia</p>
+    <ul><li>EN-language support for US members; high CSAT on US time zones.</li></ul>
+  </div>
+  <div class="job">
+    <div class="job-title-row"><h3 class="job-title">Banquet Captain — <span class="job-company">Hilton Bonnet Creek</span></h3></div>
+    <p class="job-meta">2017 – 2018 · Orlando, FL</p>
+    <ul><li>Led service teams for large-scale corporate events; luxury service standards.</li></ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div class="section-bar"></div><h2 class="section-title">Education &amp; Certifications</h2></div>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <h3 class="edu-degree">Computer Programming and Analysis</h3>
+      <p class="edu-school">Valencia Community College</p>
+      <p class="edu-meta">Orlando, FL · 2004 – 2008</p>
+    </div>
+    <div class="edu-card">
+      <h3 class="edu-degree">AMD AI Academy — Certified</h3>
+      <p class="edu-school">3 AMD Certifications</p>
+      <ul class="edu-list">
+        <li>AI on AMD Instinct GPUs</li>
+        <li>Hugging Face on AMD</li>
+        <li>Kubernetes on AMD Instinct</li>
+      </ul>
+    </div>
+  </div>
+  <div class="quote-box">Continuous self-directed learning verified through shipped production products.</div>
+</section>
+
+</div>
+</body>
+</html>
