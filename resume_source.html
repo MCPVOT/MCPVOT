@@ -29,12 +29,12 @@
   .poster { width: 1100px; background: var(--bg); position: relative; margin: 0 auto; padding: 56px 52px 64px; overflow: hidden; }
   .header { text-align: center; position: relative; padding-bottom: 36px; }
   .header-glow { position: absolute; top: 0; left: 15%; width: 70%; height: 220px; background: radial-gradient(ellipse at center, rgba(0,217,255,0.10) 0%, rgba(0,217,255,0.0) 70%); pointer-events: none; }
-  .name { font-size: 52px; font-weight: 900; letter-spacing: 0.06em; color: var(--cyan); margin: 0 0 10px; text-shadow: 0 0 18px rgba(0,217,255,0.28); }
-  .tagline { font-size: 15.5px; font-weight: 600; letter-spacing: 0.14em; color: #c9ced6; margin: 0 0 22px; }
+  .name { font-size: 54px; font-weight: 900; letter-spacing: 0.06em; color: var(--cyan); margin: 0 0 10px; text-shadow: 0 0 18px rgba(0,217,255,0.28); }
+  .tagline { font-size: 16px; font-weight: 600; letter-spacing: 0.14em; color: #c9ced6; margin: 0 0 22px; }
   .tagline .sep { color: var(--cyan); margin: 0 4px; }
   .chip-rows { margin-bottom: 22px; }
   .contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 100%; margin-bottom: 10px; }
-  .chip { display: inline-flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 500; padding: 7px 15px; border-radius: 999px; line-height: 1.2; white-space: nowrap; text-decoration: none; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px; line-height: 1.2; white-space: nowrap; text-decoration: none; }
   .chip-solid { background: #161616; border: 1px solid var(--border); color: #d7dbe0; }
   .chip-cyan   { border: 1px solid rgba(0,217,255,0.55);  color: var(--cyan);   background: rgba(0,217,255,0.05); }
   .chip-green  { border: 1px solid rgba(0,255,136,0.50);  color: var(--green);  background: rgba(0,255,136,0.05); }
@@ -43,15 +43,15 @@
   .stats { display: flex; flex-wrap: wrap; justify-content: space-between; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px 26px; }
   .stat { text-align: center; flex: 1 1 auto; min-width: 120px; }
   .stat + .stat { border-left: 1px solid var(--border-soft); }
-  .stat-num { display: block; font-size: 34px; font-weight: 800; letter-spacing: 0.02em; line-height: 1.1; margin-bottom: 6px; }
-  .stat-label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.15em; color: var(--faint); text-transform: uppercase; }
+  .stat-num { display: block; font-size: 36px; font-weight: 800; letter-spacing: 0.02em; line-height: 1.1; margin-bottom: 6px; }
+  .stat-label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 500; letter-spacing: 0.14em; color: var(--faint); text-transform: uppercase; }
   .section { margin-top: 48px; }
   .section-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
   .section-bar { width: 4px; height: 24px; background: var(--cyan); border-radius: 2px; box-shadow: 0 0 10px rgba(0,217,255,0.5); flex-shrink: 0; }
-  .section-title { font-size: 23px; font-weight: 800; color: #ffffff; margin: 0; letter-spacing: 0.01em; }
-  .section-comment { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--faint); margin: 0 0 18px 16px; }
+  .section-title { font-size: 24px; font-weight: 800; color: #ffffff; margin: 0; letter-spacing: 0.01em; }
+  .section-comment { font-family: 'JetBrains Mono', monospace; font-size: 13.5px; color: var(--faint); margin: 0 0 18px 16px; }
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 26px 28px; }
-  .body-text { font-size: 15.5px; line-height: 1.68; color: var(--muted); margin: 0; overflow-wrap: break-word; }
+  .body-text { font-size: 16.5px; line-height: 1.7; color: var(--muted); margin: 0; overflow-wrap: break-word; }
   .body-text b, .body-text strong { color: #e8eaee; font-weight: 600; }
   .body-text .hl-cyan { color: var(--cyan); font-weight: 600; }
   .body-text .hl-green { color: var(--green); font-weight: 600; }
@@ -64,68 +64,73 @@
   .arch-card.b-cyan   { border-left: 3px solid var(--cyan); }
   .arch-card.b-green  { border-left: 3px solid var(--green); }
   .arch-card.b-teal   { border-left: 3px solid var(--teal); }
-  .arch-tag { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px; }
+  .arch-tag { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px; }
   .arch-card.b-orange .arch-tag { color: var(--orange); }
   .arch-card.b-cyan .arch-tag   { color: var(--cyan); }
   .arch-card.b-green .arch-tag  { color: var(--green); }
   .arch-card.b-teal .arch-tag   { color: var(--teal); }
-  .arch-title { font-size: 17.5px; font-weight: 700; color: #ffffff; margin: 0 0 4px; }
-  .arch-comment { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--faint); margin: 0 0 10px; }
-  .arch-body { font-size: 14.5px; line-height: 1.6; color: var(--muted); margin: 0; }
-  .arch-metric { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; margin: 10px 0 0; display: block; }
+  .arch-title { font-size: 18.5px; font-weight: 700; color: #ffffff; margin: 0 0 4px; }
+  .arch-comment { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--faint); margin: 0 0 10px; }
+  .arch-body { font-size: 15.5px; line-height: 1.62; color: var(--muted); margin: 0; }
+  .arch-metric { font-family: 'JetBrains Mono', monospace; font-size: 13px; margin: 10px 0 0; display: block; }
   .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .proj-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; }
   .proj-top { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
-  .proj-num { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; color: #3a3f46; }
-  .proj-name { font-size: 19px; font-weight: 800; color: #ffffff; }
-  .live-badge { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 700; letter-spacing: 0.12em; color: var(--green); border: 1px solid rgba(0,255,136,0.4); background: rgba(0,255,136,0.06); border-radius: 4px; padding: 2px 7px; white-space: nowrap; }
-  .proj-desc { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 12px 0 0; flex-grow: 1; }
-  .proj-visit { display: inline-block; margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 700; letter-spacing: 0.12em; color: var(--green); text-decoration: none; }
+  .proj-num { font-family: 'JetBrains Mono', monospace; font-size: 23px; font-weight: 700; color: #3a3f46; }
+  .proj-name { font-size: 20px; font-weight: 800; color: #ffffff; }
+  .live-badge { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: var(--green); border: 1px solid rgba(0,255,136,0.4); background: rgba(0,255,136,0.06); border-radius: 4px; padding: 2px 7px; white-space: nowrap; }
+  .proj-desc { font-size: 15px; line-height: 1.62; color: var(--muted); margin: 12px 0 0; flex-grow: 1; }
+  .proj-visit { display: inline-block; margin-top: 18px; font-family: 'JetBrains Mono', monospace; font-size: 13.5px; font-weight: 700; letter-spacing: 0.12em; color: var(--green); text-decoration: none; }
   .proj-visit .arr { color: var(--cyan); }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; max-width: 100%; }
-  .tchip { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; padding: 3px 9px; border-radius: 6px; background: #161616; border: 1px solid var(--border); color: #c3c8cf; white-space: nowrap; }
+  .tchip { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 500; padding: 3px 9px; border-radius: 6px; background: #161616; border: 1px solid var(--border); color: #c3c8cf; white-space: nowrap; }
   .tchip.c-cyan   { color: var(--cyan);   border-color: rgba(0,217,255,0.45); }
   .tchip.c-green  { color: var(--green);  border-color: rgba(0,255,136,0.40); }
   .tchip.c-orange { color: var(--orange); border-color: rgba(255,107,53,0.45); }
   .tchip.c-teal   { color: var(--teal);   border-color: rgba(0,239,185,0.40); }
   .featured { margin-top: 14px; background: var(--card-deep); border: 1px solid rgba(0,217,255,0.55); border-radius: 14px; padding: 26px 28px; box-shadow: 0 0 28px rgba(0,217,255,0.14), inset 0 0 60px rgba(0,217,255,0.03); position: relative; }
-  .featured-label { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--cyan); letter-spacing: 0.14em; margin-bottom: 10px; }
+  .featured-label { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--cyan); letter-spacing: 0.14em; margin-bottom: 10px; }
   .featured-title-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
-  .featured-title { font-size: 23px; font-weight: 800; color: #ffffff; margin: 0; }
-  .featured-body { font-size: 15px; line-height: 1.65; color: #c3c8cf; margin: 14px 0 0; }
-  .featured-visit { display: inline-block; margin-top: 18px; font-family: 'JetBrains Mono', monospace; font-size: 13.5px; font-weight: 700; letter-spacing: 0.14em; color: var(--green); text-decoration: none; border: 1px solid rgba(0,255,136,0.45); background: rgba(0,255,136,0.05); padding: 8px 16px; border-radius: 8px; }
+  .featured-title { font-size: 24px; font-weight: 800; color: #ffffff; margin: 0; }
+  .featured-body { font-size: 16px; line-height: 1.66; color: #c3c8cf; margin: 14px 0 0; }
+  .featured-visit { display: inline-block; margin-top: 20px; font-family: 'JetBrains Mono', monospace; font-size: 14.5px; font-weight: 700; letter-spacing: 0.14em; color: var(--green); text-decoration: none; border: 1px solid rgba(0,255,136,0.45); background: rgba(0,255,136,0.05); padding: 8px 16px; border-radius: 8px; }
   .stack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .stack-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; }
-  .stack-cat { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; color: var(--cyan); margin: 0 0 12px; text-transform: uppercase; }
+  .stack-cat { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 700; letter-spacing: 0.16em; color: var(--cyan); margin: 0 0 12px; text-transform: uppercase; }
   .stack-box.k-green .stack-cat { color: var(--green); }
   .stack-box.k-orange .stack-cat { color: var(--orange); }
   .stack-box.k-teal .stack-cat { color: var(--teal); }
   .job { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 26px; margin-bottom: 12px; }
   .job:last-child { margin-bottom: 0; }
   .job-title-row { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
-  .job-title { font-size: 17px; font-weight: 700; color: #ffffff; margin: 0; }
+  .job-title { font-size: 18px; font-weight: 700; color: #ffffff; margin: 0; }
   .job-company { color: var(--green); font-weight: 700; }
-  .job-meta { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #9aa1ab; background: #181818; border: 1px solid var(--border-soft); border-radius: 6px; padding: 3px 10px; margin: 6px 0 12px; }
+  .job-meta { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #9aa1ab; background: #181818; border: 1px solid var(--border-soft); border-radius: 6px; padding: 3px 10px; margin: 6px 0 12px; }
   .job ul { margin: 0; padding: 0; list-style: none; }
-  .job li { font-size: 14.5px; line-height: 1.6; color: var(--muted); padding-left: 20px; position: relative; margin-bottom: 5px; }
+  .job li { font-size: 15.5px; line-height: 1.6; color: var(--muted); padding-left: 20px; position: relative; margin-bottom: 5px; }
   .job li:last-child { margin-bottom: 0; }
   .job li::before { content: '\25B9'; position: absolute; left: 0; color: var(--green); font-size: 13px; text-shadow: 0 0 8px rgba(0,255,136,0.4); }
   .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .edu-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 26px; }
-  .edu-degree { font-size: 17px; font-weight: 700; color: #ffffff; margin: 0 0 4px; }
-  .edu-school { font-size: 14px; color: var(--green); font-weight: 600; margin: 0 0 4px; }
-  .edu-meta { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--faint); margin: 0; }
+  .edu-degree { font-size: 18px; font-weight: 700; color: #ffffff; margin: 0 0 4px; }
+  .edu-school { font-size: 14.5px; color: var(--green); font-weight: 600; margin: 0 0 4px; }
+  .edu-meta { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--faint); margin: 0; }
   .edu-list { margin: 8px 0 0; padding: 0; list-style: none; }
-  .edu-list li { font-size: 14px; color: var(--muted); padding-left: 18px; position: relative; margin-bottom: 4px; line-height: 1.5; }
+  .edu-list li { font-size: 15px; color: var(--muted); padding-left: 18px; position: relative; margin-bottom: 4px; line-height: 1.5; }
   .edu-list li::before { content: '\25B8'; position: absolute; left: 0; color: var(--cyan); text-shadow: 0 0 8px rgba(0,217,255,0.4); }
 
-  .metrics-section { margin-top: 44px; }
+    .cap-section { margin-top: 30px; }
+  .cap-rail { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 30px; }
+  .cap-item { display: flex; align-items: baseline; gap: 12px; border-left: 2px solid rgba(0,217,255,0.45); padding: 3px 0 3px 12px; }
+  .cap-key { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); white-space: nowrap; min-width: 84px; }
+  .cap-val { font-size: 14.5px; line-height: 1.45; color: var(--muted); }
+.metrics-section { margin-top: 44px; }
   .metric-rail { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
   .metric-cell { background: var(--card-deep); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; text-align: left; }
-  .metric-num { display: block; font-size: 34px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.05; margin-bottom: 6px; }
+  .metric-num { display: block; font-size: 36px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.05; margin-bottom: 6px; }
   .metric-unit { font-size: 18px; font-weight: 700; margin-left: 1px; }
-  .metric-label { display: block; font-size: 12.5px; line-height: 1.4; color: var(--faint); }
-  .quote-box { margin-top: 18px; border: 1.5px solid rgba(0,255,136,0.5); border-radius: 10px; background: rgba(0,255,136,0.03); padding: 16px 24px; text-align: center; font-size: 14.5px; font-style: italic; color: #c9ced6; }
+  .metric-label { display: block; font-size: 13px; line-height: 1.4; color: var(--faint); }
+  .quote-box { margin-top: 18px; border: 1.5px solid rgba(0,255,136,0.5); border-radius: 10px; background: rgba(0,255,136,0.03); padding: 18px 26px; text-align: center; font-size: 15.5px; font-style: italic; color: #c9ced6; }
 </style>
 </head>
 <body>
@@ -157,6 +162,42 @@
     <div class="stat"><span class="stat-num" style="color:var(--green)">20+</span><span class="stat-label">Years CS/Ops</span></div>
   </div>
 </header>
+
+<section class="section cap-section">
+  <div class="cap-rail">
+    <div class="cap-item"><span class="cap-key">Agents</span><span class="cap-val">Hermes fleet, sub-agent swarm, council of models, MCP plugins</span></div>
+    <div class="cap-item"><span class="cap-key">Backend</span><span class="cap-val">Rust axum, Go, PHP Laravel, TypeScript Next.js, Python FastAPI</span></div>
+    <div class="cap-item"><span class="cap-key">On-chain</span><span class="cap-val">Solana, Base L2, Ethereum, Solidity, x402 and c402 HTTP 402</span></div>
+    <div class="cap-item"><span class="cap-key">Data</span><span class="cap-val">PostgreSQL, MySQL, MongoDB, SQLite, Redis, Prisma, Neon</span></div>
+    <div class="cap-item"><span class="cap-key">CRM</span><span class="cap-val">Multi-tenant Laravel, GoHighLevel pipeline mapping, HMAC webhooks</span></div>
+    <div class="cap-item"><span class="cap-key">Ops</span><span class="cap-val">DigitalOcean, Vercel, GitHub Actions, Docker, Kubernetes</span></div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="section-head"><div class="section-bar"></div><h2 class="section-title">Summary</h2></div>
+  <div class="card">
+    <p class="body-text">
+      <b>AI Architek designing and running autonomous multi-agent systems in production.</b> Not one harness: a
+      fleet of them &mdash; Hermes, a DeepSeek harness, and focused worker harnesses, each a full runtime with its own
+      memory, sessions and scheduled work &mdash; routing tasks to specialist sub-agents (OpenCode / Cline / Codex). A
+      council of models, each LLM an independent policy aggregated by a reward model, returns one high-confidence
+      answer; persistent cross-session memory keeps design intent alive. 600+ versioned skills load on demand; when
+      the agents lack a capability, I build it: a new agent, a sub-agent, a custom skill, or an MCP plugin.
+      <span class="hl-green">Shipped end-to-end:</span> an AI real-estate platform with Colombian legal compliance
+      (<span class="hl-green">Pequi, live</span>), an on-chain <span class="hl-cyan">x402</span> payment facilitator on
+      <span class="hl-teal">Base mainnet</span> listed in the <span class="hl-cyan">Coinbase ecosystem</span>, Colombia's
+      first public real-estate API monetized with the <span class="hl-orange">c402 HTTP-402 protocol</span>, a multi-tenant
+      CRM platform with client portals, and a <span class="hl-teal">Solana</span> execution stack proven on mainnet with
+      real money. <span class="hl-cyan">Go, Rust, PHP, TypeScript and Python</span> in production, plus CRM middleware on axum
+      (HMAC webhooks, SSE fan-out, rate limiting). Published open-source tooling in three languages: an MCP contract probe
+      (Go), a webhook signature guard (PHP, 11/11 self-tests), and a constant-time HMAC verifier (Rust).
+      MCP servers on the latest 2026-07-28 stateless Streamable HTTP spec, verified against a published tool contract so a
+      silent drop cannot reach production. Bilingual EN/ES, US time zones, owner from architecture to deployment.
+    </p>
+  </div>
+</section>
 
 <section class="section metrics-section">
   <div class="section-head"><div class="section-bar"></div><h2 class="section-title">Verified In Production</h2></div>
@@ -194,29 +235,6 @@
       <span class="metric-num" style="color:var(--orange)">11/11</span>
       <span class="metric-label">Self-tests passing in the published guard</span>
     </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-head"><div class="section-bar"></div><h2 class="section-title">Summary</h2></div>
-  <div class="card">
-    <p class="body-text">
-      <b>AI Architek designing and running autonomous multi-agent systems in production.</b> Not one harness: a
-      fleet of them &mdash; Hermes, a DeepSeek harness, and focused worker harnesses, each a full runtime with its own
-      memory, sessions and scheduled work &mdash; routing tasks to specialist sub-agents (OpenCode / Cline / Codex). A
-      council of models, each LLM an independent policy aggregated by a reward model, returns one high-confidence
-      answer; persistent cross-session memory keeps design intent alive. 600+ versioned skills load on demand; when
-      the agents lack a capability, I build it: a new agent, a sub-agent, a custom skill, or an MCP plugin.
-      <span class="hl-green">Shipped end-to-end:</span> an AI real-estate platform with Colombian legal compliance
-      (<span class="hl-green">Pequi, live</span>), an on-chain <span class="hl-cyan">x402</span> payment facilitator on
-      <span class="hl-teal">Base mainnet</span> listed in the <span class="hl-cyan">Coinbase ecosystem</span>, Colombia's
-      first public real-estate API monetized with the <span class="hl-orange">c402 HTTP-402 protocol</span>, a multi-tenant
-      CRM platform with client portals, and a <span class="hl-teal">Solana</span> execution stack proven on mainnet with
-      real money. Go, Rust, PHP &amp; CRM middleware (axum, HMAC webhooks, SSE). Published open-source tooling in all
-      three: an MCP contract probe (Go), a webhook signature guard (PHP), and a constant-time HMAC verifier (Rust).
-      MCP servers on the latest 2026-07-28 stateless Streamable HTTP spec. Bilingual EN/ES, US time zones, owner from
-      architecture to deployment.
-    </p>
   </div>
 </section>
 
