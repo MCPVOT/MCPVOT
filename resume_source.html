@@ -56,18 +56,23 @@
   .body-text .hl-cyan { color: var(--cyan); font-weight: 600; }
   .body-text .hl-green { color: var(--green); font-weight: 600; }
   .body-text .hl-orange { color: var(--orange); font-weight: 600; }
+  .body-text .hl-teal { color: var(--teal); font-weight: 600; }
   .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .arch-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
   .arch-card.b-orange { border-left: 3px solid var(--orange); }
   .arch-card.b-cyan   { border-left: 3px solid var(--cyan); }
   .arch-card.b-green  { border-left: 3px solid var(--green); }
+  .arch-card.b-teal   { border-left: 3px solid var(--teal); }
   .arch-tag { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px; }
   .arch-card.b-orange .arch-tag { color: var(--orange); }
   .arch-card.b-cyan .arch-tag   { color: var(--cyan); }
   .arch-card.b-green .arch-tag  { color: var(--green); }
+  .arch-card.b-teal .arch-tag   { color: var(--teal); }
   .arch-title { font-size: 16px; font-weight: 700; color: #ffffff; margin: 0 0 4px; }
   .arch-comment { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--faint); margin: 0 0 10px; }
   .arch-body { font-size: 13px; line-height: 1.6; color: var(--muted); margin: 0; }
+  .arch-metric { font-family: 'JetBrains Mono', monospace; font-size: 11px; margin: 10px 0 0; display: block; }
   .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .proj-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; }
   .proj-top { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
@@ -121,27 +126,28 @@
 <header class="header">
   <div class="header-glow"></div>
   <h1 class="name">ALDO VILLAMIL</h1>
-  <p class="tagline">AI ARCHITEK <span class="sep">·</span> AUTONOMOUS AGENT SYSTEMS <span class="sep">·</span> MCP <span class="sep">·</span> WEB3 <span class="sep">·</span> CO-FOUNDER</p>
+  <p class="tagline">AI ARCHITEK <span class="sep">·</span> AUTONOMOUS AGENT SYSTEMS <span class="sep">·</span> MCP <span class="sep">·</span> BLOCKCHAIN <span class="sep">·</span> CRM PLATFORMS <span class="sep">·</span> CO-FOUNDER</p>
   <div class="chip-rows">
     <div class="contact-row">
-      <span class="chip chip-solid">📧 Aldo728@gmail.com</span>
-      <span class="chip chip-solid">🇨🇴 +57 318 318 9499</span>
-      <span class="chip chip-solid">📍 Ibagué, Colombia (US hours)</span>
+      <span class="chip chip-solid">Aldo728@gmail.com</span>
+      <span class="chip chip-solid">+57 318 318 9499</span>
+      <span class="chip chip-solid">Ibagué, Colombia (US hours)</span>
     </div>
     <div class="contact-row">
-      <a class="chip chip-cyan" href="https://mcpvot.github.io">🌐 mcpvot.github.io</a>
-      <a class="chip chip-green" href="https://mcpvot.xyz">⚡ mcpvot.xyz</a>
-      <a class="chip chip-orange" href="https://xpequi.xyz">🏠 xpequi.xyz</a>
-      <a class="chip chip-teal" href="https://github.com/MCPVOT">💻 github.com/MCPVOT</a>
-      <a class="chip chip-cyan" href="https://mcpvot.eth.limo">🔗 mcpvot.eth</a>
+      <a class="chip chip-cyan" href="https://mcpvot.github.io">mcpvot.github.io</a>
+      <a class="chip chip-green" href="https://mcpvot.xyz">mcpvot.xyz</a>
+      <a class="chip chip-orange" href="https://xpequi.xyz">xpequi.xyz</a>
+      <a class="chip chip-teal" href="https://github.com/MCPVOT">github.com/MCPVOT</a>
+      <a class="chip chip-cyan" href="https://mcpvot.eth.limo">mcpvot.eth</a>
     </div>
   </div>
   <div class="stats">
     <div class="stat"><span class="stat-num" style="color:var(--cyan)">3</span><span class="stat-label">Live Products</span></div>
-    <div class="stat"><span class="stat-num" style="color:var(--green)">20+</span><span class="stat-label">Years CS/Ops</span></div>
+    <div class="stat"><span class="stat-num" style="color:var(--green)">600+</span><span class="stat-label">Agent Skills</span></div>
     <div class="stat"><span class="stat-num" style="color:var(--orange)">4</span><span class="stat-label">Open-Source</span></div>
     <div class="stat"><span class="stat-num" style="color:var(--teal)">3</span><span class="stat-label">AMD Certs</span></div>
-    <div class="stat"><span class="stat-num" style="color:var(--green)">ES/EN</span><span class="stat-label">Bilingual</span></div>
+    <div class="stat"><span class="stat-num" style="color:var(--cyan)">3</span><span class="stat-label">Chains Shipped</span></div>
+    <div class="stat"><span class="stat-num" style="color:var(--green)">20+</span><span class="stat-label">Years CS/Ops</span></div>
   </div>
 </header>
 
@@ -150,17 +156,20 @@
   <div class="card">
     <p class="body-text">
       <b>AI Architek designing and running autonomous multi-agent systems in production.</b> Not one harness: a
-      fleet of them — Hermes, a DeepSeek harness, and focused worker harnesses, each a full runtime with its own
-      memory, sessions and scheduled work — routing tasks to specialist sub-agents (OpenCode / Cline / Codex). A
-      council of models — each LLM an independent policy aggregated by a reward model — returns one high-confidence
+      fleet of them &mdash; Hermes, a DeepSeek harness, and focused worker harnesses, each a full runtime with its own
+      memory, sessions and scheduled work &mdash; routing tasks to specialist sub-agents (OpenCode / Cline / Codex). A
+      council of models, each LLM an independent policy aggregated by a reward model, returns one high-confidence
       answer; persistent cross-session memory keeps design intent alive. 600+ versioned skills load on demand; when
-      the agents lack a capability, I build it: a new agent, a sub-agent, a custom skill, or an MCP plugin. Shipped end-to-end: an AI real-estate platform with
-      Colombian legal compliance (<span class="hl-green">Pequi, live</span>), an on-chain x402 payment facilitator
-      listed in the <span class="hl-cyan">Coinbase ecosystem</span>, and Colombia's first public real-estate API
-      monetized with the <span class="hl-orange">c402 HTTP-402 protocol</span>. Go, Rust &amp; CRM middleware (axum,
-      HMAC webhooks, SSE). Published open-source tooling in all three: an MCP contract probe (Go), a
-      webhook signature guard (PHP), and a constant-time HMAC verifier (Rust). MCP servers on the latest 2026-07-28 stateless Streamable HTTP spec. Bilingual EN/ES,
-      US time zones, owner from architecture to deployment.
+      the agents lack a capability, I build it: a new agent, a sub-agent, a custom skill, or an MCP plugin.
+      <span class="hl-green">Shipped end-to-end:</span> an AI real-estate platform with Colombian legal compliance
+      (<span class="hl-green">Pequi, live</span>), an on-chain <span class="hl-cyan">x402</span> payment facilitator on
+      <span class="hl-teal">Base mainnet</span> listed in the <span class="hl-cyan">Coinbase ecosystem</span>, Colombia's
+      first public real-estate API monetized with the <span class="hl-orange">c402 HTTP-402 protocol</span>, a multi-tenant
+      CRM platform with client portals, and a <span class="hl-teal">Solana</span> execution stack proven on mainnet with
+      real money. Go, Rust, PHP &amp; CRM middleware (axum, HMAC webhooks, SSE). Published open-source tooling in all
+      three: an MCP contract probe (Go), a webhook signature guard (PHP), and a constant-time HMAC verifier (Rust).
+      MCP servers on the latest 2026-07-28 stateless Streamable HTTP spec. Bilingual EN/ES, US time zones, owner from
+      architecture to deployment.
     </p>
   </div>
 </section>
@@ -171,8 +180,8 @@
     <div class="arch-card b-orange">
       <div class="arch-tag">Swarm // 24/7</div>
       <h3 class="arch-title">Agent Swarm</h3>
-      <p class="arch-comment">// orchestrator decides · routes · verifies</p>
-      <p class="arch-body">Specialist sub-agents build in parallel — one task per agent, isolated workspaces. No self-report trusted until verified. Runs 24/7 in production on DigitalOcean with an always-on security lane.</p>
+      <p class="arch-comment">// orchestrator decides &middot; routes &middot; verifies</p>
+      <p class="arch-body">Specialist sub-agents build in parallel &mdash; one task per agent, isolated workspaces. No self-report trusted until verified. Runs 24/7 in production on DigitalOcean with an always-on security lane.</p>
     </div>
     <div class="arch-card b-cyan">
       <div class="arch-tag">Council // Reliability</div>
@@ -184,46 +193,96 @@
       <div class="arch-tag">Pipeline // Spec-First</div>
       <h3 class="arch-title">Verification &amp; Security Lane</h3>
       <p class="arch-comment">// spec-first pipeline</p>
-      <p class="arch-body">3-stage gate before merge: lint → typecheck → integration. Secret-scanning across repos/logs, credential hygiene, spend monitoring.</p>
+      <p class="arch-body">3-stage gate before merge: lint &rarr; typecheck &rarr; integration. Secret-scanning across repos/logs, credential hygiene, spend monitoring.</p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="section-head"><div class="section-bar"></div><h2 class="section-title">Projects — S.D.A.E. Ecosystem</h2></div>
-  <p class="section-comment">// Sustainable · Decentralized · Autonomous · Ecosystem</p>
+  <div class="section-head"><div class="section-bar"></div><h2 class="section-title">Blockchain &amp; Payments Engineering</h2></div>
+  <p class="section-comment">// solana mainnet &middot; base layer 2 &middot; ethereum &middot; agent payments</p>
+  <div class="grid-3">
+    <div class="arch-card b-teal">
+      <div class="arch-tag">Solana // Mainnet</div>
+      <h3 class="arch-title">On-Chain Execution Stack</h3>
+      <p class="arch-comment">// verified executor &middot; real money</p>
+      <p class="arch-body">A verified executor proven with real money on mainnet: $1 round trips landed flat, fresh versus existing token accounts costed, and Jupiter and Meteora DLMM swap paths simulated before signing. Latency measured against a live competitor feed rather than assumed, and a first measurement that looked 11&times; better was corrected to the real 1.3&times;.</p>
+      <span class="arch-metric" style="color:var(--teal)">201 ms/slot &middot; 3.08% round-trip cost &middot; 98.3% exit retention</span>
+    </div>
+    <div class="arch-card b-cyan">
+      <div class="arch-tag">Base L2 // Ethereum</div>
+      <h3 class="arch-title">x402 Payment Facilitator</h3>
+      <p class="arch-comment">// http 402 &middot; on-chain settlement</p>
+      <p class="arch-body">HTTP 402 payment negotiation with on-chain USDC settlement and on-chain verification, agent to agent. Solidity contracts, ERC-1155 token gating, Chainlink VRF randomness. Listed in the Coinbase ecosystem, with full test coverage.</p>
+      <span class="arch-metric" style="color:var(--cyan)">chainId 8453 &middot; eip155:8453 &middot; Base Sepolia testnet</span>
+    </div>
+    <div class="arch-card b-orange">
+      <div class="arch-tag">c402 // Fiat Rails</div>
+      <h3 class="arch-title">HTTP 402 for Colombia</h3>
+      <p class="arch-comment">// pay-per-request &middot; no wallet</p>
+      <p class="arch-body">Colombia-first HTTP 402 protocol: agents and applications pay per request in COP over the rails Colombians already use, with zero-crypto settlement. Challenges carry a nonce and TTL and are replay-guarded. The fiat counterpart of x402, authored as a public MIT spec.</p>
+      <span class="arch-metric" style="color:var(--orange)">spec v2.1 &middot; Wompi &middot; PSE &middot; Nequi &middot; Daviplata</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div class="section-bar"></div><h2 class="section-title">CRM &amp; Client Platform Engineering</h2></div>
+  <p class="section-comment">// multi-tenant &middot; gohighlevel &middot; webhooks &middot; ai ops</p>
+  <div class="grid-2">
+    <div class="arch-card b-green">
+      <div class="arch-tag">Laravel + Rust // Multi-Tenant</div>
+      <h3 class="arch-title">Agency CRM &amp; Client Portals</h3>
+      <p class="arch-comment">// one client, one pipeline</p>
+      <p class="arch-body">A Laravel 10 agency platform with tenant-isolated client records and per-client GoHighLevel pipeline mapping, so every client syncs to its own marketing pipeline instead of a shared one. A 2,342-line axum portal serves the client dashboard, deployed and operated on DigitalOcean with daily sync jobs, and every client mapping is protected by a unique client identifier so a webhook can never cross tenants.</p>
+      <span class="arch-metric" style="color:var(--green)">strategy-pattern payload builders &middot; unique client_id mapping &middot; GHL 150+ markets</span>
+    </div>
+    <div class="arch-card b-orange">
+      <div class="arch-tag">Rust // Axum + SQLite</div>
+      <h3 class="arch-title">CRM Middleware &amp; AI Operations</h3>
+      <p class="arch-comment">// fail-closed &middot; receipts written</p>
+      <p class="arch-body">Axum middleware over SQLite that serves the embedded PWA, verifies HMAC-signed webhooks with replay protection, and rate-limits by tenant. An AI backfill runs nightly behind a fail-closed gate that writes a receipt for every decision, and a read-only browser agent audits the platform weekly. Deploys are gated on an artifact marker that only the new binary emits, so a stale build can never be published. A published PHP guard covers the same HMAC and RSA-SHA256 verification path with zero dependencies.</p>
+      <span class="arch-metric" style="color:var(--orange)">fail-closed &middot; receipts logged &middot; read-only by design &middot; 11/11 self-tests</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div class="section-bar"></div><h2 class="section-title">Projects &mdash; S.D.A.E. Ecosystem</h2></div>
+  <p class="section-comment">// Sustainable &middot; Decentralized &middot; Autonomous &middot; Ecosystem</p>
   <div class="proj-grid">
     <div class="proj-card">
       <div class="proj-top"><span class="proj-num">01</span><span class="proj-name">Pequi</span><span class="live-badge">LIVE</span></div>
       <div class="chips"><span class="tchip c-cyan">Next.js 16</span><span class="tchip c-cyan">React 19</span><span class="tchip c-green">Clerk</span><span class="tchip c-orange">Wompi</span><span class="tchip c-cyan">Prisma</span><span class="tchip c-green">DeepSeek V4</span><span class="tchip c-teal">GRPO roadmap</span></div>
       <p class="proj-desc">AI real-estate platform for Colombia. Ley 820-compliant contracts, payments, 15 AI tools, multi-agent chat. Live in Ibagué + Bogotá (276 barrios), c402 monetization.</p>
-      <a class="proj-visit" href="https://xpequi.xyz">VISIT <span class="arr">→</span></a>
+      <a class="proj-visit" href="https://xpequi.xyz">VISIT <span class="arr">&rarr;</span></a>
     </div>
     <div class="proj-card">
       <div class="proj-top"><span class="proj-num">02</span><span class="proj-name">MCPVOTS</span><span class="live-badge">LIVE</span></div>
       <div class="chips"><span class="tchip c-orange">Solidity</span><span class="tchip c-cyan">Base</span><span class="tchip c-green">Chainlink VRF</span><span class="tchip c-teal">ERC-1155</span><span class="tchip c-green">USDC</span><span class="tchip c-cyan">Hardhat</span></div>
-      <p class="proj-desc">"Stripe for AI agents": on-chain x402 payment facilitator — autonomous agent-to-agent payments on Base mainnet. Coinbase-ecosystem listed; full test coverage, on-chain verification.</p>
-      <a class="proj-visit" href="https://mcpvot.xyz">VISIT <span class="arr">→</span></a>
+      <p class="proj-desc">"Stripe for AI agents": on-chain x402 payment facilitator &mdash; autonomous agent-to-agent payments on Base mainnet. Coinbase-ecosystem listed; full test coverage, on-chain verification.</p>
+      <a class="proj-visit" href="https://mcpvot.xyz">VISIT <span class="arr">&rarr;</span></a>
     </div>
     <div class="proj-card">
       <div class="proj-top"><span class="proj-num">03</span><span class="proj-name">MCPVotsAGI</span></div>
       <div class="chips"><span class="tchip c-cyan">Python</span><span class="tchip c-green">AsyncIO</span><span class="tchip c-teal">WebSockets</span><span class="tchip c-orange">Redis</span><span class="tchip c-green">PyPI</span></div>
-      <p class="proj-desc">Multi-model consensus SDK — specialist LLM outputs aggregated by reward model into one high-confidence answer. A2A protocol gateway, Redis-backed persistent memory. <b style="color:#e8eaee">pip install mcpvotsagi</b></p>
-      <a class="proj-visit" href="https://pypi.org/project/mcpvotsagi/">VISIT <span class="arr">→</span></a>
+      <p class="proj-desc">Multi-model consensus SDK &mdash; specialist LLM outputs aggregated by reward model into one high-confidence answer. A2A protocol gateway, Redis-backed persistent memory. <b style="color:#e8eaee">pip install mcpvotsagi</b></p>
+      <a class="proj-visit" href="https://pypi.org/project/mcpvotsagi/">VISIT <span class="arr">&rarr;</span></a>
     </div>
   </div>
   <div class="featured">
-    <div class="featured-label">// PROTOCOL — 04</div>
+    <div class="featured-label">// PROTOCOL &mdash; 04</div>
     <div class="featured-title-row">
       <h3 class="featured-title">xpequi-api + c402 Protocol</h3>
       <div class="chips"><span class="tchip c-cyan">REST API</span><span class="tchip c-green">Open Finance</span><span class="tchip c-teal">TS SDK</span><span class="tchip c-orange">Python SDK</span><span class="tchip c-cyan">MCP Server</span><span class="tchip c-green">IPFS</span></div>
     </div>
     <p class="featured-body">
-      Colombia's first public real-estate data API — <b style="color:#ffffff">18 endpoints, 276 barrios</b>.
-      c402: Colombia-first HTTP 402 fiat rails (Wompi · PSE · Nequi · Daviplata) with zero-crypto settlement —
-      agents and apps pay per request through local payment rails, no wallet required.
+      Colombia's first public real-estate data API &mdash; <b style="color:#ffffff">18 endpoints, 276 barrios</b>, with a
+      stateless MCP server on the 2026-07-28 spec. c402 adds Colombia-first HTTP 402 fiat rails
+      (Wompi &middot; PSE &middot; Nequi &middot; Daviplata) with zero-crypto settlement &mdash; agents and apps pay per
+      request through local payment rails, no wallet required.
     </p>
-    <a class="featured-visit" href="https://xpequi.xyz">VISIT XPEQUI.XYZ →</a>
+    <a class="featured-visit" href="https://xpequi.xyz">VISIT XPEQUI.XYZ &rarr;</a>
   </div>
 </section>
 
@@ -233,38 +292,38 @@
     <div class="stack-box"><p class="stack-cat">Languages</p><div class="chips"><span class="tchip">TypeScript</span><span class="tchip">Python</span><span class="tchip">Go</span><span class="tchip">PHP</span><span class="tchip">Rust</span><span class="tchip">Solidity</span><span class="tchip">SQL</span></div></div>
     <div class="stack-box k-green"><p class="stack-cat">AI / Agents</p><div class="chips"><span class="tchip">DeepSeek V4</span><span class="tchip">Hermes Agent</span><span class="tchip">OpenCode</span><span class="tchip">Cline</span><span class="tchip">Codex</span><span class="tchip">OpenRouter</span><span class="tchip">Groq</span><span class="tchip">Council of Models</span></div></div>
     <div class="stack-box k-teal"><p class="stack-cat">MCP</p><div class="chips"><span class="tchip">2026-07-28 Spec</span><span class="tchip">Stateless Servers</span><span class="tchip">Streamable HTTP</span><span class="tchip">MCP Server</span><span class="tchip">Agentic Wallet</span></div></div>
-    <div class="stack-box k-orange"><p class="stack-cat">ML / RL</p><div class="chips"><span class="tchip">PPO</span><span class="tchip">GRPO</span><span class="tchip">RLVR</span><span class="tchip">Reward-Model Aggregation</span></div></div>
-    <div class="stack-box"><p class="stack-cat">Backend / DB</p><div class="chips"><span class="tchip">PostgreSQL</span><span class="tchip">MySQL</span><span class="tchip">MongoDB</span><span class="tchip">Prisma</span><span class="tchip">Neon</span><span class="tchip">Supabase</span><span class="tchip">Redis (Upstash)</span><span class="tchip">Go</span><span class="tchip">Rust (axum)</span><span class="tchip">CRM middleware</span></div></div>
+    <div class="stack-box k-orange"><p class="stack-cat">Blockchain</p><div class="chips"><span class="tchip">Solana</span><span class="tchip">Base</span><span class="tchip">Ethereum</span><span class="tchip">Solidity</span><span class="tchip">Chainlink VRF</span><span class="tchip">ERC-1155</span><span class="tchip">Jupiter</span><span class="tchip">Hardhat</span></div></div>
+    <div class="stack-box"><p class="stack-cat">Backend / DB</p><div class="chips"><span class="tchip">PostgreSQL</span><span class="tchip">MySQL</span><span class="tchip">MongoDB</span><span class="tchip">SQLite</span><span class="tchip">Prisma</span><span class="tchip">Neon</span><span class="tchip">Redis</span><span class="tchip">Go</span><span class="tchip">Rust (axum)</span><span class="tchip">CRM middleware</span></div></div>
     <div class="stack-box k-green"><p class="stack-cat">Frontend</p><div class="chips"><span class="tchip">Next.js</span><span class="tchip">React</span><span class="tchip">HTMX (server-driven)</span><span class="tchip">Tailwind CSS</span><span class="tchip">Three.js</span></div></div>
     <div class="stack-box k-orange"><p class="stack-cat">Automation</p><div class="chips"><span class="tchip">n8n</span><span class="tchip">DeerFlow</span><span class="tchip">VoltAgent</span><span class="tchip">Cron Jobs</span><span class="tchip">Message Queues</span><span class="tchip">GHL 150+ markets</span></div></div>
     <div class="stack-box"><p class="stack-cat">DevOps</p><div class="chips"><span class="tchip">GitHub Actions</span><span class="tchip">Vercel</span><span class="tchip">DigitalOcean</span><span class="tchip">Docker</span><span class="tchip">Kubernetes (AMD)</span><span class="tchip">Sentry</span><span class="tchip">Nginx</span></div></div>
-    <div class="stack-box k-teal"><p class="stack-cat">Blockchain</p><div class="chips"><span class="tchip">Base</span><span class="tchip">Ethereum</span><span class="tchip">Solana</span><span class="tchip">Chainlink VRF</span><span class="tchip">ERC-1155</span><span class="tchip">ENS</span><span class="tchip">Farcaster</span></div></div>
+    <div class="stack-box k-teal"><p class="stack-cat">ML / RL</p><div class="chips"><span class="tchip">PPO</span><span class="tchip">GRPO</span><span class="tchip">RLVR</span><span class="tchip">Reward-Model Aggregation</span></div></div>
   </div>
 </section>
 
 <section class="section">
   <div class="section-head"><div class="section-bar"></div><h2 class="section-title">Work Experience</h2></div>
   <div class="job">
-    <div class="job-title-row"><h3 class="job-title">Co-Founder &amp; Full-Stack Developer — <span class="job-company">Village of Thousands</span></h3></div>
-    <p class="job-meta">2021 – Present · Remote</p>
+    <div class="job-title-row"><h3 class="job-title">Co-Founder &amp; Full-Stack Developer &mdash; <span class="job-company">Village of Thousands</span></h3></div>
+    <p class="job-meta">2021 &ndash; Present &middot; Remote</p>
     <ul>
       <li>Headless e-commerce: React + Shopify on Vercel, DigitalOcean backend (99.9% uptime).</li>
-      <li>Created brand identity — graffiti-inspired design language; NYFW-featured.</li>
+      <li>Created brand identity &mdash; graffiti-inspired design language; NYFW-featured.</li>
     </ul>
   </div>
   <div class="job">
-    <div class="job-title-row"><h3 class="job-title">Digital Marketing Manager — <span class="job-company">PolloRiko.io</span></h3></div>
-    <p class="job-meta">2018 – Present · Houston, TX (Remote)</p>
+    <div class="job-title-row"><h3 class="job-title">Digital Marketing Manager &mdash; <span class="job-company">PolloRiko.io</span></h3></div>
+    <p class="job-meta">2018 &ndash; Present &middot; Houston, TX (Remote)</p>
     <ul><li>Full digital presence for US restaurant chain: web, SEO, social, AI-generated content.</li></ul>
   </div>
   <div class="job">
-    <div class="job-title-row"><h3 class="job-title">Customer Service — <span class="job-company">United Health Care (Teleperformance)</span></h3></div>
-    <p class="job-meta">2020 – 2021 · Ibagué, Colombia</p>
+    <div class="job-title-row"><h3 class="job-title">Customer Service &mdash; <span class="job-company">United Health Care (Teleperformance)</span></h3></div>
+    <p class="job-meta">2020 &ndash; 2021 &middot; Ibagu&eacute;, Colombia</p>
     <ul><li>EN-language support for US members; high CSAT on US time zones.</li></ul>
   </div>
   <div class="job">
-    <div class="job-title-row"><h3 class="job-title">Banquet Captain — <span class="job-company">Hilton Bonnet Creek</span></h3></div>
-    <p class="job-meta">2017 – 2018 · Orlando, FL</p>
+    <div class="job-title-row"><h3 class="job-title">Banquet Captain &mdash; <span class="job-company">Hilton Bonnet Creek</span></h3></div>
+    <p class="job-meta">2017 &ndash; 2018 &middot; Orlando, FL</p>
     <ul><li>Led service teams for large-scale corporate events; luxury service standards.</li></ul>
   </div>
 </section>
@@ -275,10 +334,10 @@
     <div class="edu-card">
       <h3 class="edu-degree">Computer Programming and Analysis</h3>
       <p class="edu-school">Valencia Community College</p>
-      <p class="edu-meta">Orlando, FL · 2004 – 2008</p>
+      <p class="edu-meta">Orlando, FL &middot; 2004 &ndash; 2008</p>
     </div>
     <div class="edu-card">
-      <h3 class="edu-degree">AMD AI Academy — Certified</h3>
+      <h3 class="edu-degree">AMD AI Academy &mdash; Certified</h3>
       <p class="edu-school">3 AMD Certifications</p>
       <ul class="edu-list">
         <li>AI on AMD Instinct GPUs</li>
