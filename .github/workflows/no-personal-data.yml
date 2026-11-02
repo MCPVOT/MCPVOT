@@ -43,7 +43,11 @@ jobs:
         run: |
           set -eu
           pats='villamil|(^|[^a-z])aldo([^a-z]|$)|aldo728|[a-z0-9._%+-]+@gmail\.com|318[ .-]?318[ .-]?9499'
-          hits=$(git ls-files -z | xargs -0 grep -InE "$pats" 2>/dev/null || true)
+          # This guard file is excluded on purpose: it contains the patterns themselves,
+          # so scanning it would always match and fail on a correct repository.
+          hits=$(git ls-files -z \
+            | grep -zv '^\.github/workflows/no-personal-data\.yml$' \
+            | xargs -0 grep -InE "$pats" 2>/dev/null || true)
           if [ -n "$hits" ]; then
             echo "::error::Personal identifier found in tracked files."
             echo "$hits"
