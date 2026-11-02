@@ -1,0 +1,64 @@
+name: No personal data
+
+# This repository is the public MCPVOT profile. It must never carry a real
+# name, personal email, phone number, or a resume/CV document.
+# History: two resume PDFs and their HTML source were committed here and later
+# scrubbed from all history with git-filter-repo. This check exists so that
+# cannot happen again.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    name: Block personal identifiers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Reject personal document filenames
+        run: |
+          set -eu
+          echo "Scanning tracked filenames for resumes, CVs and personal names..."
+          bad=$(git ls-files | grep -iE '(^|/)(resume|curriculum|cv)[^/]*\.(pdf|docx?|rtf|txt|html?)$|villamil' || true)
+          if [ -n "$bad" ]; then
+            echo "::error::Personal document found in the repository tree."
+            echo "$bad"
+            echo "This repo is public. Never commit a resume, CV, or any document carrying a real name."
+            echo "Keep those in a private repo or locally."
+            exit 1
+          fi
+          echo "OK: no personal documents tracked."
+
+      - name: Block real name, personal email and phone
+        run: |
+          set -eu
+          pats='villamil|(^|[^a-z])aldo([^a-z]|$)|aldo728|[a-z0-9._%+-]+@gmail\.com|318[ .-]?318[ .-]?9499'
+          hits=$(git ls-files -z | xargs -0 grep -InE "$pats" 2>/dev/null || true)
+          if [ -n "$hits" ]; then
+            echo "::error::Personal identifier found in tracked files."
+            echo "$hits"
+            echo ""
+            echo "Public surface rule: no real name, no personal email, no phone number."
+            echo "Use the brand 'AI Architek' (always spelled with a K) or the account name 'MCPVOT'."
+            echo "Country-level product context such as 'Colombia' is fine."
+            exit 1
+          fi
+          echo "OK: no personal identifiers in tracked files."
+
+      - name: State the allowed vocabulary
+        run: |
+          echo "Allowed on this public surface:"
+          echo "  AI Architek        brand, always with a K"
+          echo "  MCPVOT             account and organisation identity"
+          echo "  Colombia           country-level business context"
+          echo "Not allowed: real name, personal email, phone, home city, resume documents."
